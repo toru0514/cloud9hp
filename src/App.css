@@ -29,5 +29,64 @@
     width: 200px;
 }
 .cloud9-image{
-    width: 585px;
+    width: 600px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 84%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    row-gap: 30px;
+}
+
+form > div {
+    display: grid;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: solid 1px #dddddd;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: normal;
+    outline: none;
+    color: currentColor;
+    appearance: none;
+    border-radius: 0;
+    resize: none;
+}
+
+button {
+    justify-self: start;
+    padding: 15px 30px;
+    border: solid 1px currentColor;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: blue;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.7;
 }

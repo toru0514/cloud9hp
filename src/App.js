@@ -19,6 +19,7 @@ const pinkivoryUrl = "https://www.creema.jp/item/14943315/detail"
 const karinUrl = "https://www.creema.jp/item/14943464/detail"
 const satineUrl = "https://www.creema.jp/item/14943485/detail"
 const purpleheartUrl = "https://www.creema.jp/item/14943547/detail"
+const cloud9Url = "https://www.creema.jp/creator/7614629/item/onsale"
 
   function App () {
   const openUrlTab = (url) =>{
@@ -28,13 +29,11 @@ const purpleheartUrl = "https://www.creema.jp/item/14943547/detail"
     <div className="App">
       <h1>木材工房cloud9(構築中…)</h1>
       <p>画像をクリック!</p>
-  <button>
     <img className='cloud9-image'
          src={cloud9}
          alt="cloud9写真"
-         onClick={openUrlTab}
+         onClick={()=>openUrlTab(cloud9Url)}
     />
-  </button>
       <br />
       <img className='purpleheart-image'
            src={purpleheart}
@@ -75,6 +74,28 @@ const purpleheartUrl = "https://www.creema.jp/item/14943547/detail"
            alt="パドック写真"
            onClick={()=>openUrlTab(padaukUrl)}/>
       <br />
+      <div className="container">
+        <h1>お問い合わせ</h1>
+        <form name="contact" method="POST" data-netlify="true">
+          <div>
+            <label htmlFor="name">お名前（必須）</label>
+            <input name="name" type="text" required/>
+          </div>
+          <div>
+            <label htmlFor="email">メールアドレス（必須）</label>
+            <input name="email" type="email" required/>
+          </div>
+          <div>
+            <label htmlFor="content">お問い合わせ内容</label>
+            <textarea
+              name="content"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">送信する</button>
+        </form>
+      </div>
     </div>
   )
 }
