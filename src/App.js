@@ -27,6 +27,7 @@ const purpleheartUrl = "https://www.creema.jp/item/14943547/detail"
   return (
     <div className="App">
       <h1>木材工房cloud9(構築中…)</h1>
+      <p>画像をクリック!</p>
   <button>
     <img className='cloud9-image'
          src={cloud9}
