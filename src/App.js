@@ -1,14 +1,16 @@
 import './App.css'
-import padauk from './images/padauk.jpeg'
-import rosewood from './images/rosewood.jpeg'
-import wenge from './images/wenge.jpeg'
-import maple from './images/maple.jpeg'
-import snakewood from './images/snakewood.jpeg'
-import pinkivory from './images/pinkivory.jpeg'
-import karin from './images/karin.jpeg'
-import satine from './images/satine.jpeg'
-import purpleheart from './images/purpleheart.jpeg'
-import cloud9 from './images/cloud9.jpeg'
+import {useState} from 'react'
+
+import padauk from './images/padauk.png'
+import rosewood from './images/rosewood.png'
+import wenge from './images/wenge.png'
+import maple from './images/maple.png'
+import snakewood from './images/snakewood.png'
+import pinkivory from './images/pinkivory.png'
+import karin from './images/karin.png'
+import satine from './images/satine.png'
+import purpleheart from './images/purpleheart.png'
+import cloud9 from './images/cloud9.png'
 
 const padaukUrl = "https://www.creema.jp/item/14942878/detail"
 const rosewoodUrl = "https://www.creema.jp/item/14942931/detail"
@@ -22,10 +24,36 @@ const purpleheartUrl = "https://www.creema.jp/item/14943547/detail"
 const cloud9Url = "https://www.creema.jp/creator/7614629/item/onsale"
 
   function App () {
+    const [open, setOpen] = useState(false);
+    const toggleFunction = () => {
+      setOpen((prevState) => !prevState);
+    };
+
+
   const openUrlTab = (url) =>{
     window.open(url)
   }
   return (
+    <div>
+    <header className="header">
+      <button
+        type="button"
+        aria-controls="navigation"
+        aria-expanded={open}
+        aria-label="メニューを開きます"
+        onClick={toggleFunction}
+        className="toggleButton"
+      >
+        <span className="line-1"/>
+        <span className="line-2"/>
+      </button>
+      <nav id="navigation" aria-hidden={!open} className="navigation">
+        <ul>
+          <li>Product</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
     <div className="App">
       <h1>木材工房cloud9(構築中…)</h1>
       <p>画像をクリック!</p>
@@ -75,6 +103,8 @@ const cloud9Url = "https://www.creema.jp/creator/7614629/item/onsale"
            onClick={()=>openUrlTab(padaukUrl)}/>
       <br />
     </div>
+    </div>
+
   )
 }
 
