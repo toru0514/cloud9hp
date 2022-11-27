@@ -72,7 +72,10 @@ button {
 }
 
 .line-2 {
-    transform: translate(0, 10px);
+    transform: translate(0, 5px);
+}
+.line-3 {
+    transform: translate(0, 20px);
 }
 
 .toggleButton[aria-expanded="true"] > .line-1 {
@@ -82,11 +85,13 @@ button {
 .toggleButton[aria-expanded="true"] > .line-2 {
     transform: translate(0, 0) rotate(45deg);
 }
+.toggleButton[aria-expanded="true"] > .line-3 {
+    transform: translate(0, 0) rotate(45deg);
+}
 
 .navigation {
     display: none;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     padding: 5rem 2rem;
     position: fixed;

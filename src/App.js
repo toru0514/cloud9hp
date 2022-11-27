@@ -46,6 +46,7 @@ const cloud9Url = "https://www.creema.jp/creator/7614629/item/onsale"
       >
         <span className="line-1"/>
         <span className="line-2"/>
+        <span className="line-3"/>
       </button>
       <nav id="navigation" aria-hidden={!open} className="navigation">
         <ul>
