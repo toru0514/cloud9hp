@@ -93,12 +93,12 @@ button {
     display: none;
     align-items: center;
     flex-direction: column;
-    padding: 5rem 2rem;
+    padding: 2rem 2rem;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    height: 100vh;
+    height: 20vh;
     background-color: white;
 }
 

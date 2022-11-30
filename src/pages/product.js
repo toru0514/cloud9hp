@@ -10,12 +10,3 @@ class ProductPage extends React.Component {
   }
 }
 export default ProductPage
-
-// function ProductPage () {
-//     return (
-//       <div>
-//         <p>Product Pages</p>
-//       </div>
-//     );
-// }
-// export default ProductPage

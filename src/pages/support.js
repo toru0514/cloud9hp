@@ -1,12 +1,12 @@
 import React from 'react';
 
-class ContactPage extends React.Component {
+class SupportPage extends React.Component {
   render () {
     return (
       <div>
-        Contact Pages
+        Support Pages
       </div>
     );
   }
 }
-export default ContactPage
+export default SupportPage
