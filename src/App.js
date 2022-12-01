@@ -39,7 +39,7 @@ import Home from './pages/home'
       </nav>
     </header>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contact" element={<Contact />} />

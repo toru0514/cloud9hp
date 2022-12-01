@@ -78,7 +78,6 @@ class HomePage extends React.Component {
                onClick={()=>openUrlTab(padaukUrl)}/>
           <br />
         </div>
-
       </div>
 
     );
