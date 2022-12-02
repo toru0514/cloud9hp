@@ -10,10 +10,6 @@ import maple from '../images/maple.png'
 import wenge from '../images/wenge.png'
 import rosewood from '../images/rosewood.png'
 import padauk from '../images/padauk.png'
-import creema from '../images/creema.png'
-import minne from '../images/minne.png'
-import instagram from '../images/instagram.png'
-import twitter from '../images/twitter.png'
 
 
 const padaukUrl = "https://www.creema.jp/item/14942878/detail"
@@ -26,11 +22,6 @@ const karinUrl = "https://www.creema.jp/item/14943464/detail"
 const satineUrl = "https://www.creema.jp/item/14943485/detail"
 const purpleheartUrl = "https://www.creema.jp/item/14943547/detail"
 const cloud9Url = "https://www.creema.jp/creator/7614629/item/onsale"
-const creemaUrl = "https://www.creema.jp/creator/7614629/item/onsale"
-const minneUrl = "https://minne.com/@cloud9-wood"
-const instagramUrl = "https://instagram.com/cloud9_woodwork?igshid=YmMyMTA2M2Y="
-const twitterUrl = "https://twitter.com/cloud9_woodwork?s=21&t=bdwddBl2tEFpUtr9tMjI5w"
-
 
 
 class HomePage extends React.Component {
@@ -41,69 +32,52 @@ class HomePage extends React.Component {
     return (
       <div>
         <div className="App">
-          <h1>木材工房cloud9(構築中…)</h1>
           <p>画像をクリック!</p>
-          <img className='cloud9-image'
+          <img className='image'
                src={cloud9}
                alt="cloud9写真"
                onClick={()=>openUrlTab(cloud9Url)}
           />
           <br />
-          <img className='purpleheart-image'
+          <img className='image'
                src={purpleheart}
                alt="パープルハート写真"
                onClick={()=>openUrlTab(purpleheartUrl)}/>
-          <img className='satine-image'
+          <img className='image'
                src={satine}
                alt="サティーネ写真"
                onClick={()=>openUrlTab(satineUrl)}/>
-          <img className='karin-image'
+          <img className='image'
                src={karin}
                alt="花梨写真"
                onClick={()=>openUrlTab(karinUrl)}/>
           <br />
-          <img className='pinkivory-image'
+          <img className='image'
                src={pinkivory}
                alt="ピンクアイボリー写真"
                onClick={()=>openUrlTab(pinkivoryUrl)}/>
-          <img className='snakewood-image'
+          <img className='image'
                src={snakewood}
                alt="スネークウッド写真"
                onClick={()=>openUrlTab(snakewoodUrl)}/>
-          <img className='maple-image'
+          <img className='image'
                src={maple}
                alt="メープル写真"
                onClick={()=>openUrlTab(mapleUrl)}/>
           <br />
-          <img className='wenge-image'
+          <img className='image'
                src={wenge}
                alt="ウェンジ写真"
                onClick={()=>openUrlTab(wengeUrl)}/>
-          <img className='rosewood-image'
+          <img className='image'
                src={rosewood}
                alt="ローズウッド写真"
                onClick={()=>openUrlTab(rosewoodUrl)}/>
-          <img className='padauk-image'
+          <img className='image'
                src={padauk}
                alt="パドック写真"
                onClick={()=>openUrlTab(padaukUrl)}/>
           <br />
-          <img className='icon-image'
-               src={creema}
-               alt="creemaアイコン"
-               onClick={()=>openUrlTab(creemaUrl)}/>
-          <img className='icon-image'
-               src={minne}
-               alt="minneアイコン"
-               onClick={()=>openUrlTab(minneUrl)}/>
-          <img className='instagram-image'
-               src={instagram}
-               alt="instagramアイコン"
-               onClick={()=>openUrlTab(instagramUrl)}/>
-          <img className='twitter-image'
-               src={twitter}
-               alt="twitterアイコン"
-               onClick={()=>openUrlTab(twitterUrl)}/>
         </div>
       </div>
 

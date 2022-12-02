@@ -1,22 +1,40 @@
 .App {
     text-align: center;
 }
+.product-page{
+    text-align: center;
+}
+.contact-page{
+    text-align: center;
+}
+.support-page{
+    text-align: center;
+}
+.image{
+    cursor: pointer;
+}
 .icon-image{
     width:60px;
     border: solid 1px;
     border-radius: 15px;
     margin: 5px 5px 5px 5px;
+    cursor: pointer;
 }
 .instagram-image{
     width:60px;
     margin: 5px 5px 5px 5px;
+    cursor: pointer;
 }
 .twitter-image{
     width:60px;
     border-radius: 15px;
     margin: 5px 5px 5px 5px;
+    cursor: pointer;
 }
-
+.link-menu{
+    text-align: center;
+    margin-top: 20px;
+}
 *,
 *::before,
 *::after {
@@ -39,7 +57,6 @@ div {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
 }
 
 ul,
@@ -60,6 +77,9 @@ button {
     padding: 2rem;
     z-index: 999;
     background-color: white;
+}
+.title{
+    margin:  0 auto;
 }
 
 .toggleButton {
