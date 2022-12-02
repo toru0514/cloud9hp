@@ -1,6 +1,22 @@
 .App {
     text-align: center;
 }
+.icon-image{
+    width:60px;
+    border: solid 1px;
+    border-radius: 15px;
+    margin: 5px 5px 5px 5px;
+}
+.instagram-image{
+    width:60px;
+    margin: 5px 5px 5px 5px;
+}
+.twitter-image{
+    width:60px;
+    border-radius: 15px;
+    margin: 5px 5px 5px 5px;
+}
+
 *,
 *::before,
 *::after {

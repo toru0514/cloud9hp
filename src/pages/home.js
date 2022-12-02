@@ -10,6 +10,11 @@ import maple from '../images/maple.png'
 import wenge from '../images/wenge.png'
 import rosewood from '../images/rosewood.png'
 import padauk from '../images/padauk.png'
+import creema from '../images/creema.png'
+import minne from '../images/minne.png'
+import instagram from '../images/instagram.png'
+import twitter from '../images/twitter.png'
+
 
 const padaukUrl = "https://www.creema.jp/item/14942878/detail"
 const rosewoodUrl = "https://www.creema.jp/item/14942931/detail"
@@ -21,6 +26,12 @@ const karinUrl = "https://www.creema.jp/item/14943464/detail"
 const satineUrl = "https://www.creema.jp/item/14943485/detail"
 const purpleheartUrl = "https://www.creema.jp/item/14943547/detail"
 const cloud9Url = "https://www.creema.jp/creator/7614629/item/onsale"
+const creemaUrl = "https://www.creema.jp/creator/7614629/item/onsale"
+const minneUrl = "https://minne.com/@cloud9-wood"
+const instagramUrl = "https://instagram.com/cloud9_woodwork?igshid=YmMyMTA2M2Y="
+const twitterUrl = "https://twitter.com/cloud9_woodwork?s=21&t=bdwddBl2tEFpUtr9tMjI5w"
+
+
 
 class HomePage extends React.Component {
   render () {
@@ -77,6 +88,22 @@ class HomePage extends React.Component {
                alt="パドック写真"
                onClick={()=>openUrlTab(padaukUrl)}/>
           <br />
+          <img className='icon-image'
+               src={creema}
+               alt="creemaアイコン"
+               onClick={()=>openUrlTab(creemaUrl)}/>
+          <img className='icon-image'
+               src={minne}
+               alt="minneアイコン"
+               onClick={()=>openUrlTab(minneUrl)}/>
+          <img className='instagram-image'
+               src={instagram}
+               alt="instagramアイコン"
+               onClick={()=>openUrlTab(instagramUrl)}/>
+          <img className='twitter-image'
+               src={twitter}
+               alt="twitterアイコン"
+               onClick={()=>openUrlTab(twitterUrl)}/>
         </div>
       </div>
 
