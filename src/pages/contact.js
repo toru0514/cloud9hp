@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 class ContactPage extends React.Component {
   render () {
@@ -6,7 +6,8 @@ class ContactPage extends React.Component {
       <div className="contact-page">
         Contact Pages
       </div>
-    );
+    )
   }
 }
+
 export default ContactPage

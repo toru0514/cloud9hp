@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 class SupportPage extends React.Component {
   render () {
@@ -6,7 +6,8 @@ class SupportPage extends React.Component {
       <div className="support-page">
         Support Pages
       </div>
-    );
+    )
   }
 }
+
 export default SupportPage
