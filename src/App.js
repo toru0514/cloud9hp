@@ -1,19 +1,17 @@
+import './reset.css'
 import './App.css'
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Product from './pages/product'
-import Contact from './pages/contact'
-import Support from './pages/support'
-import Home from './pages/home'
+import Product from './pages/Product'
+import Contact from './pages/Contact'
+import Support from './pages/Support'
+import Home from './pages/Home'
 import { links } from './data'
 
 function App () {
   const [open, setOpen] = useState(false)
   const toggleFunction = () => {
     setOpen((prevState) => !prevState)
-  }
-  const openUrlTab = (url) => {
-    window.open(url)
   }
 
   return (
@@ -35,9 +33,9 @@ function App () {
         <nav id="navigation" aria-hidden={!open} className="navigation">
           <ul className="">
             <li><a href="/">Home</a></li>
-            <li><a href="/product">Product</a></li>
-            <li><a href="/support">Support</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/Product.js">Product</a></li>
+            <li><a href="/Support.js">Support</a></li>
+            <li><a href="/Contact.js">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -49,12 +47,13 @@ function App () {
       </Routes>
       <div className="link-menu">
         {links.map((link) => (
-          <img
-            key={link.id}
-            className={`icon-image ${link.id}-image`}
-            src={link.image}
-            alt={link.name}
-            onClick={() => openUrlTab(link.url)}/>
+          <a href={link.url} target="_blank">
+            <img
+              key={link.id}
+              className={`icon-image ${link.id}-image`}
+              src={link.image}
+              alt={link.name}/>
+          </a>
         ))}
         <br/>
         <p>https://cloud9woodwork.com/</p>

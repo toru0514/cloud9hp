@@ -14,14 +14,9 @@
   text-align: center;
 }
 
-.image {
-  cursor: pointer;
-}
-
 .icon-image {
   width: 60px;
   margin: 5px 5px 5px 5px;
-  cursor: pointer;
   border-radius: 15px;
 }
 
@@ -80,6 +75,7 @@ button {
 }
 
 .title {
+  font-size: 2rem;
   margin: 0 auto;
 }
 
