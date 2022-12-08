@@ -1,10 +1,14 @@
 .gallery {
-  margin: auto;
-  width: 600px;
-  display: flex;
-  flex-wrap: wrap;
+    margin: auto;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shop-image {
+    width: 200px;
 }
 
 .gallery .image {
-  width: 200px;
+    width: 200px;
 }

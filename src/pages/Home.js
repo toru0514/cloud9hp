@@ -7,10 +7,9 @@ class HomePage extends React.Component {
     return (
       <div>
         <div className="App">
-          <p>画像をクリック!</p>
           <a href={shop.url} target="_blank">
             <img
-              className="image"
+              className="shop-image"
               src={shop.image}
               alt="cloud9写真"
             />
