@@ -6,6 +6,7 @@ import { Link } from './components/Link'
 import { RouteView } from './components/RouteView'
 import { HamburgerButton } from './components/HamburgerButton'
 import { HamburgerMenu } from './components/HamburgerMenu'
+import { FooterMenu } from './components/FooterMenu'
 
 function App () {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -23,14 +24,12 @@ function App () {
         </HamburgerMenu>
       </header>
       <RouteView/>
-      <div className="under-line1"/>
-      <div className="menu-area">
-        <p className="border-lineno"><Link to="/">Home</Link></p>
-        <p className="border-line"><Link to="/product">Product</Link></p>
-        <p className="border-line"><Link to="/support">Support</Link></p>
-        <p className="border-line"><Link to="/contact">Contact</Link></p>
-      </div>
-      <div className="under-line1"/>
+      <FooterMenu>
+        <FooterMenu.Item to="/">Home</FooterMenu.Item>
+        <FooterMenu.Item to="/product">Product</FooterMenu.Item>
+        <FooterMenu.Item to="/support">Support</FooterMenu.Item>
+        <FooterMenu.Item to="/contact">Contact</FooterMenu.Item>
+      </FooterMenu>
       <div className="link-menu">
         {links.map((link) => (
           <Link key={link.id} to={link.url} external>

@@ -34,35 +34,6 @@
   margin-top: 20px;
 }
 
-.under-line1 {
-  border: 1px solid;
-  margin-top: 10px;
-  margin-left: 0;
-}
-
-.menu-area {
-  margin-top: 10px;
-  margin-left: 20px;
-  display: flex;
-}
-
-.border-lineno {
-  padding: 2px 8px;
-}
-
-.border-lineno:hover {
-  text-decoration: underline;
-}
-
-.border-line {
-  border-left: 1px solid #000000;
-  padding: 2px 8px;
-}
-
-.border-line:hover {
-  text-decoration: underline;
-}
-
 .title {
   color: black;
   font-size: 43px;
