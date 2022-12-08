@@ -9,6 +9,7 @@ import { HamburgerMenu } from './components/HamburgerMenu'
 import { FooterMenu } from './components/FooterMenu'
 import { SNSLinks } from './components/SNSLinks'
 import { Copyright } from './components/Copyright'
+import { Title } from './components/Title'
 
 function App () {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -16,7 +17,7 @@ function App () {
   return (
     <div>
       <header className="header">
-        <h1 className="title">木材工房cloud9(構築中…)</h1>
+        <Title>木材工房cloud9(構築中…)</Title>
         <HamburgerButton onClick={() => setIsExpanded(!isExpanded)} expanded={isExpanded}/>
         <HamburgerMenu expanded={isExpanded}>
           <HamburgerMenu.Item to="/">Home</HamburgerMenu.Item>
