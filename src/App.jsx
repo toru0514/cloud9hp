@@ -1,4 +1,4 @@
-import './reset.css'
+import './assets/styles/reset.css'
 import './App.css'
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
@@ -33,9 +33,9 @@ function App () {
         <nav id="navigation" aria-hidden={!open} className="navigation">
           <ul className="">
             <li><a href="/">Home</a></li>
-            <li><a href="/product">Product</a></li>
-            <li><a href="/support">Support</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/Product.jsx">Product</a></li>
+            <li><a href="/Support.jsx">Support</a></li>
+            <li><a href="/Contact.jsx">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -48,9 +48,9 @@ function App () {
       <div className="under-line1"/>
       <div className="menu-area">
         <p className="border-lineno"><a href="/">Home</a></p>
-        <p className="border-line"><a href="/product">Product</a></p>
-        <p className="border-line"><a href="/support">Support</a></p>
-        <p className="border-line"><a href="/contact">Contact</a></p>
+        <p className="border-line"><a href="/Product.jsx">Product</a></p>
+        <p className="border-line"><a href="/Support.jsx">Support</a></p>
+        <p className="border-line"><a href="/Contact.jsx">Contact</a></p>
       </div>
       <div className="under-line1"/>
       <div className="link-menu">
