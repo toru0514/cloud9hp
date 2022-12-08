@@ -7,7 +7,10 @@ class HomePage extends React.Component {
     return (
       <div>
         <div className="App">
-          <a href={shop.url} target="_blank">
+          <a
+            href={shop.url}
+            target="_blank"
+            rel="noreferrer">
             <img
               className="shop-image"
               src={shop.image}
@@ -22,6 +25,7 @@ class HomePage extends React.Component {
                   key={product.id}
                   href={product.url}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img
                     className="image"

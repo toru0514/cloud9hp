@@ -55,7 +55,7 @@ function App () {
       <div className="under-line1"/>
       <div className="link-menu">
         {links.map((link) => (
-          <a href={link.url} target="_blank">
+          <a href={link.url} target="_blank" rel="noreferrer">
             <img
               key={link.id}
               className={`icon-image ${link.id}-image`}
