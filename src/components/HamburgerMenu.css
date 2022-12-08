@@ -1,0 +1,33 @@
+.HamburgerMenu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 20vh;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.HamburgerMenu:not(.HamburgerMenu-expanded) {
+  display: none;
+}
+
+.HamburgerMenu_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem 0;
+}
+
+.HamburgerMenu_item {
+  text-align: center;
+}
+
+.HamburgerMenu_item:hover {
+  text-decoration: underline;
+}
