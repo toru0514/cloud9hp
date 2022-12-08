@@ -1,31 +1,15 @@
 import './assets/styles/reset.css'
 import './App.css'
-import { useState } from 'react'
-import { links } from './data'
-import { Link } from './components/Link'
 import { RouteView } from './components/RouteView'
-import { HamburgerButton } from './components/HamburgerButton'
-import { HamburgerMenu } from './components/HamburgerMenu'
 import { FooterMenu } from './components/FooterMenu'
 import { SNSLinks } from './components/SNSLinks'
 import { Copyright } from './components/Copyright'
-import { Title } from './components/Title'
+import { Header } from './components/Header'
 
 function App () {
-  const [isExpanded, setIsExpanded] = useState(false)
-
   return (
     <div>
-      <header className="header">
-        <Title>木材工房cloud9(構築中…)</Title>
-        <HamburgerButton onClick={() => setIsExpanded(!isExpanded)} expanded={isExpanded}/>
-        <HamburgerMenu expanded={isExpanded}>
-          <HamburgerMenu.Item to="/">Home</HamburgerMenu.Item>
-          <HamburgerMenu.Item to="/product">Product</HamburgerMenu.Item>
-          <HamburgerMenu.Item to="/support">Support</HamburgerMenu.Item>
-          <HamburgerMenu.Item to="/contact">Contact</HamburgerMenu.Item>
-        </HamburgerMenu>
-      </header>
+      <Header/>
       <RouteView/>
       <FooterMenu>
         <FooterMenu.Item to="/">Home</FooterMenu.Item>
