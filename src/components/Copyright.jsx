@@ -1,7 +1,7 @@
 import './Copyright.css'
 
-export const Copyright = () => {
+export const Copyright = ({ children }) => {
   return (
-    <small className="Copyright">https://cloud9woodwork.com</small>
+    <small className="Copyright">{children}</small>
   )
 }

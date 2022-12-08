@@ -12,7 +12,7 @@ export const Footer = () => {
         <FooterMenu.Item to="/contact">Contact</FooterMenu.Item>
       </FooterMenu>
       <SNSLinks/>
-      <Copyright/>
+      <Copyright>https://cloud9woodwork.com</Copyright>
     </footer>
   )
 }
