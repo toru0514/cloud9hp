@@ -1,11 +1,11 @@
 import './SNSLinks.css'
-import { links } from '../data'
+import { snsLinks } from '../data'
 import { Link } from './Link'
 
 export const SNSLinks = () => {
   return (
     <div className="SNSLinks">
-      {links.map((link) => <Item link={link}/>)}
+      {snsLinks.map((link) => <Item link={link}/>)}
     </div>
   )
 }
