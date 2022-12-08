@@ -7,6 +7,8 @@ import { RouteView } from './components/RouteView'
 import { HamburgerButton } from './components/HamburgerButton'
 import { HamburgerMenu } from './components/HamburgerMenu'
 import { FooterMenu } from './components/FooterMenu'
+import { SNSLinks } from './components/SNSLinks'
+import { Copyright } from './components/Copyright'
 
 function App () {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -30,19 +32,8 @@ function App () {
         <FooterMenu.Item to="/support">Support</FooterMenu.Item>
         <FooterMenu.Item to="/contact">Contact</FooterMenu.Item>
       </FooterMenu>
-      <div className="link-menu">
-        {links.map((link) => (
-          <Link key={link.id} to={link.url} external>
-            <img
-              className={`icon-image ${link.id}-image`}
-              src={link.image}
-              alt={link.name}/>
-          </Link>
-        ))}
-        <br/><br/>
-        <p>https://cloud9woodwork.com</p>
-        <br/>
-      </div>
+      <SNSLinks/>
+      <Copyright/>
     </div>
   )
 }

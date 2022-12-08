@@ -1,0 +1,15 @@
+.SNSLinks {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.SNSLinks_icon {
+  width: 60px;
+  margin: 5px 5px 5px 5px;
+  border-radius: 15px;
+}
+
+.SNSLinks_icon-creema,
+.SNSLinks_icon-minne {
+  border: solid 1px;
+}
