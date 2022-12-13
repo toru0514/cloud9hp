@@ -13,7 +13,7 @@ function App () {
   return (
     <div>
       <header className="header">
-        <h1 className="title">木材工房cloud9(構築中…)</h1>
+        <h1 className="title">木材工房cloud9 (構築中…)</h1>
         <HamburgerButton onClick={() => setIsExpanded(!isExpanded)} expanded={isExpanded}/>
         <HamburgerMenu expanded={isExpanded}>
           <HamburgerMenu.Item to="/">Home</HamburgerMenu.Item>

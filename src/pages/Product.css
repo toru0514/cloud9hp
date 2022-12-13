@@ -1,0 +1,67 @@
+span {
+    font-family: serif;
+    font-size: 15px;
+}
+
+h2 {
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.title-en {
+    font-family: serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.title-jp {
+    font-family: serif;
+    font-size: 18px;
+}
+
+.purpleheart-area {
+    display: flex;
+}
+
+.image-area {
+    display: block;
+    width: fit-content;
+    margin-left: 15px;
+}
+
+.description-area {
+    margin-left: 15px;
+    display: block;
+    max-width: 330px;
+    margin-top: 15px;
+}
+
+.product-title {
+    font-size: 18px;
+}
+
+.image {
+    top: 100px;
+}
+
+.child-image1 {
+    width: 100px;
+    top: 100px;
+    object-fit: contain;
+}
+
+.child-image2 {
+    width: 100px;
+    position: relative;
+    bottom: 100px;
+    right: 100px;
+    object-fit: contain;
+}
+
+.read-test {
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 5px;
+
+
+}
