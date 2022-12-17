@@ -33,7 +33,13 @@ class ProductPage extends React.Component {
                   <br/>
                   <span>{product.intro}</span>
                   <br/><br/>
-                  <p className="read-text">READ MORE</p>
+                  <a
+                    className="read-text"
+                    key={product.id}
+                    href={product.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >READ MORE</a>
                 </div>
               </>
             ))
