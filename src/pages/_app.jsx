@@ -1,17 +1,16 @@
-import './assets/styles/reset.css'
-import './App.css'
+import { HamburgerButton } from '../components/HamburgerButton'
+import { HamburgerMenu } from '../components/HamburgerMenu'
+import { Link } from '../components/Link'
+import { links } from '../data'
+import '../assets/styles/reset.css'
+import './_app.css'
 import { useState } from 'react'
-import { links } from './data'
-import { Link } from './components/Link'
-import { RouteView } from './components/RouteView'
-import { HamburgerButton } from './components/HamburgerButton'
-import { HamburgerMenu } from './components/HamburgerMenu'
 
-function App () {
+export default function MyApp ({ Component, pageProps }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <div>
+    <>
       <header className="header">
         <h1 className="title">木材工房cloud9 (構築中…)</h1>
         <HamburgerButton onClick={() => setIsExpanded(!isExpanded)} expanded={isExpanded}/>
@@ -22,7 +21,7 @@ function App () {
           <HamburgerMenu.Item to="/contact">Contact</HamburgerMenu.Item>
         </HamburgerMenu>
       </header>
-      <RouteView/>
+      <Component {...pageProps} />
       <div className="under-line1"/>
       <div className="menu-area">
         <p className="border-lineno"><Link to="/">Home</Link></p>
@@ -44,8 +43,6 @@ function App () {
         <p>https://cloud9woodwork.com</p>
         <br/>
       </div>
-    </div>
+    </>
   )
 }
-
-export default App

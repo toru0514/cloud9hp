@@ -1,12 +1,15 @@
-import './HamburgerMenu.css'
+import styles from './HamburgerMenu.module.css'
 import { Link } from './Link'
+import classNames from 'classnames/bind'
+
+const cx = classNames.bind(styles)
 
 export const HamburgerMenu = ({ expanded, children }) => {
-  const rootClassNames = expanded ? 'HamburgerMenu HamburgerMenu-expanded' : 'HamburgerMenu'
+  const rootClassNames = cx('HamburgerMenu', { 'HamburgerMenu-expanded': expanded })
 
   return (
     <nav className={rootClassNames}>
-      <ul className="HamburgerMenu_list">
+      <ul className={cx('HamburgerMenu_list')}>
         {children}
       </ul>
     </nav>
@@ -15,7 +18,7 @@ export const HamburgerMenu = ({ expanded, children }) => {
 
 const Item = ({ children, to }) => {
   return (
-    <li className="HamburgerMenu_item">
+    <li className={cx('HamburgerMenu_item')}>
       <Link to={to}>{children}</Link>
     </li>
   )

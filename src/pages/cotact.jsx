@@ -1,26 +1,13 @@
 import React from 'react'
-import './Contact.css'
+import styles from './contact.module.css'
+import classNames from 'classnames/bind'
 
+const cx = classNames.bind(styles)
 const ContactPage = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    const myForm = event.target
-    const formData = new FormData(myForm)
-
-    fetch('/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert('Form successfully submitted'))
-      .catch((error) => alert(error))
-  }
-
   return (
     <>
-      <div className="container">
-        <h1 className="contact-page">お問い合わせ</h1>
+      <div className={cx('container')}>
+        <h1 className={cx('contact-page')}>お問い合わせ</h1>
         <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">お名前（必須）</label>
@@ -38,7 +25,7 @@ const ContactPage = () => {
               required
             />
           </div>
-          <button className="send-button" type="submit">送信する</button>
+          <button className={cx('send-button')} type="submit">送信する</button>
         </form>
       </div>
     </>

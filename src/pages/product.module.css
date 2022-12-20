@@ -1,0 +1,60 @@
+.product-page {
+  text-align: center;
+}
+
+.serif {
+  font-family: serif;
+  font-size: 15px;
+}
+
+.title {
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.title-en {
+  font-family: serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.title-jp {
+  font-family: serif;
+  font-size: 18px;
+}
+
+.ring-repertory-area {
+  display: flex;
+  margin: auto;
+  width: 1200px;
+  flex-wrap: wrap;
+}
+
+.image-area {
+  display: block;
+  width: fit-content;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.description-area {
+  margin-left: 10px;
+  display: block;
+  max-width: 330px;
+  margin-top: 15px;
+}
+
+.product-title {
+  font-size: 18px;
+}
+
+.image {
+  top: 100px;
+}
+
+.read-text {
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 5px;
+  display: block;
+}
