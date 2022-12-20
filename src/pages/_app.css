@@ -119,3 +119,27 @@ button {
   background-color: white;
   /*position: fixed;*/
 }
+
+form {
+  display: grid;
+  row-gap: 30px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #dddddd;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: normal;
+  outline: none;
+  color: currentColor;
+  appearance: none;
+  border-radius: 0;
+  resize: none;
+}
+
+label {
+  font-family: serif;
+}
