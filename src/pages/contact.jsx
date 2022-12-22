@@ -11,8 +11,9 @@ const ContactPage = () => {
     const myForm = event.target
     const formData = new FormData(myForm)
 
-    fetch('/', {
+    fetch('/contact', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => console.log('Form successfully submitted'))
@@ -23,7 +24,7 @@ const ContactPage = () => {
     <>
       <div className={cx('container')}>
         <h1 className={cx('contact-page')}>お問い合わせ</h1>
-        <form name="Contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+        <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">お名前（必須）</label>
             <input name="name" type="text" required/>
