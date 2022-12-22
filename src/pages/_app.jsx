@@ -44,7 +44,7 @@ export default function MyApp ({ Component, pageProps }) {
           </Link>
         ))}
         <br/><br/>
-        <p>https://cloud9woodwork.com</p>
+        <p>&copy;{new Date().getFullYear()} 木材工房cloud9</p>
         <br/>
       </div>
     </>
