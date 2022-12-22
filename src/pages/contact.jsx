@@ -11,7 +11,7 @@ const ContactPage = () => {
     const myForm = event.target
     const formData = new FormData(myForm)
 
-    fetch('/contact', {
+    fetch('/', {
       method: 'POST',
       body: new URLSearchParams(formData).toString(),
     })
