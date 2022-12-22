@@ -23,7 +23,7 @@ const ContactPage = () => {
     <>
       <div className={cx('container')}>
         <h1 className={cx('contact-page')}>お問い合わせ</h1>
-        <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+        <form name="contact" method="POST" data-netlify="true">
           <div>
             <label htmlFor="name">お名前（必須）</label>
             <input name="name" type="text" required/>
@@ -40,7 +40,7 @@ const ContactPage = () => {
               required
             />
           </div>
-          <button className={cx('send-button')} type="submit">送信する</button>
+          <button className={cx('send-button')} type="submit" onSubmit={handleSubmit}>送信する</button>
         </form>
       </div>
     </>
