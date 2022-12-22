@@ -16,9 +16,7 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
+  "devDependencies": {
+    "eslint": "^8.30.0"
   }
 }
