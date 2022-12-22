@@ -13,10 +13,20 @@ export default function MyApp ({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta charSet="utf-8"/>
+        <link rel="icon" href="/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="theme-color" content="#000000"/>
+        <meta
+          name="description"
+          content="木材工房cloud9です。希少な木材を使用した高級アクセサリーを製作しているブランドです。"
+        />
+        <link rel="apple-touch-icon" href="/logo192.png"/>
+        <link rel="manifest" href="/manifest.json"/>
         <title>木材工房cloud9</title>
       </Head>
       <header className="header">
-        <h1 className="title">木材工房cloud9 (構築中…)</h1>
+        <h1 className="title">木材工房cloud9</h1>
         <HamburgerButton onClick={() => setIsExpanded(!isExpanded)} expanded={isExpanded}/>
         <HamburgerMenu expanded={isExpanded}>
           <HamburgerMenu.Item to="/">Home</HamburgerMenu.Item>
