@@ -41,7 +41,14 @@ const ProductPage = () => (
                   href={product.url}
                   target="_blank"
                   rel="noreferrer"
-                >READ MORE</a>
+                >READ MORE for Creema</a>
+                <a
+                  className={cx('read-text')}
+                  key={product.id}
+                  href={product.mUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >READ MORE for minne</a>
               </div>
             </>
           ))

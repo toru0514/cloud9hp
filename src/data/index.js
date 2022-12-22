@@ -49,6 +49,7 @@ export const products = [
   {
     id: 'purpleheart',
     url: 'https://www.creema.jp/item/14943547/detail',
+    mUrl: 'https://minne.com/items/34692068',
     image: purpleheartImage,
     enName: 'cloud9 WoodRing PURPLE HEART',
     jpName: 'cloud9 ウッドリング パープルハート',
@@ -58,6 +59,7 @@ export const products = [
   {
     id: 'satine',
     url: 'https://www.creema.jp/item/14943485/detail',
+    mUrl: 'https://minne.com/items/34692037',
     image: satineImage,
     enName: 'cloud9 WoodRing SATINE',
     jpName: 'cloud9 ウッドリング サティーネ',
@@ -67,6 +69,7 @@ export const products = [
   {
     id: 'karin',
     url: 'https://www.creema.jp/item/14943464/detail',
+    mUrl: 'https://minne.com/items/34692007',
     image: karinImage,
     enName: 'cloud9 WoodRing KARIN',
     jpName: 'cloud9 ウッドリング カリン',
@@ -76,6 +79,7 @@ export const products = [
   {
     id: 'pinkivory',
     url: 'https://www.creema.jp/item/14943315/detail',
+    mUrl: 'https://minne.com/items/34691963',
     image: pinkivoryImage,
     enName: 'cloud9 WoodRing PINK IVORY',
     jpName: 'cloud9 ウッドリング ピンクアイボリー',
@@ -85,6 +89,7 @@ export const products = [
   {
     id: 'snakewood',
     url: 'https://www.creema.jp/item/14943228/detail',
+    mUrl: 'https://minne.com/items/34691875',
     enName: 'cloud9 WoodRing SNAKE WOOD',
     jpName: 'cloud9 ウッドリング スネークウッド',
     intro: '木材の”王様”スネークウッド。男性的で力強い指輪は、着けることで圧倒的な格好良さと色気で他人と差をつけることができます。',
@@ -94,6 +99,7 @@ export const products = [
   {
     id: 'maple',
     url: 'https://www.creema.jp/item/14943075/detail',
+    mUrl: 'https://minne.com/items/34691841',
     image: mapleImage,
     enName: 'cloud9 WoodRing MAPLE',
     jpName: 'cloud9 ウッドリング メープル',
@@ -103,6 +109,7 @@ export const products = [
   {
     id: 'wenge',
     url: 'https://www.creema.jp/item/14943033/detail',
+    mUrl: 'https://minne.com/items/34691768',
     image: wengeImage,
     enName: 'cloud9 WoodRing WENGE',
     jpName: 'cloud9 ウッドリング ウェンジ',
@@ -112,6 +119,7 @@ export const products = [
   {
     id: 'rosewood',
     url: 'https://www.creema.jp/item/14942931/detail',
+    mUrl: 'https://minne.com/items/34691693',
     image: rosewoodImage,
     enName: 'cloud9 WoodRing ROSE WOOD',
     jpName: 'cloud9 ウッドリング ローズウッド',
@@ -121,6 +129,7 @@ export const products = [
   {
     id: 'padauk',
     url: 'https://www.creema.jp/item/14942878/detail',
+    mUrl: 'https://minne.com/items/34513722',
     image: padaukImage,
     enName: 'cloud9 WoodRing PADAUK',
     jpName: 'cloud9 ウッドリング パドック',
