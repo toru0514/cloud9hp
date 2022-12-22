@@ -5,12 +5,16 @@ import { links } from '../data'
 import '../assets/styles/reset.css'
 import './_app.css'
 import { useState } from 'react'
+import Head from 'next/head'
 
 export default function MyApp ({ Component, pageProps }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <>
+      <Head>
+        <title>木材工房cloud9</title>
+      </Head>
       <header className="header">
         <h1 className="title">木材工房cloud9 (構築中…)</h1>
         <HamburgerButton onClick={() => setIsExpanded(!isExpanded)} expanded={isExpanded}/>
