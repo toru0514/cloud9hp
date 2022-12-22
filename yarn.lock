@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@netlify/next@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@netlify/next/-/next-1.4.3.tgz#13f30eaedfd434d4e280afc9bdeefaea1a861456"
+  integrity sha512-2O4qfDZMCltFWUZ1Ba2U3Ayf/d+Hifw8nUInv5hHitbl/fNfQpB4CQIgBCvry16ljHJ05uBWuIAmScSNY+zMcw==
+
 "@next/env@13.0.7":
   version "13.0.7"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.0.7.tgz#7b6ccd9006d3fb57c369e3fb62b28e15324141e9"
