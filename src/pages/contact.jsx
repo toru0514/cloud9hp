@@ -9,7 +9,7 @@ const ContactPage = () => {
     <>
       <div className={cx('container')}>
         <h1 className={cx('contact-page')}>お問い合わせ</h1>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" action="/success" method="POST" data-netlify="true">
           <div>
             <label htmlFor="name">お名前（必須）</label>
             <input name="name" type="text" required/>
