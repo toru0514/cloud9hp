@@ -31,7 +31,7 @@ export default function MyApp ({ Component, pageProps }) {
         <HamburgerMenu expanded={isExpanded}>
           <HamburgerMenu.Item to="/">Home</HamburgerMenu.Item>
           <HamburgerMenu.Item to="/product">Product</HamburgerMenu.Item>
-          <HamburgerMenu.Item to="/support">Support</HamburgerMenu.Item>
+          {/*<HamburgerMenu.Item to="/support">Support</HamburgerMenu.Item>*/}
           <HamburgerMenu.Item to="/contact">Contact</HamburgerMenu.Item>
         </HamburgerMenu>
       </header>
@@ -40,7 +40,7 @@ export default function MyApp ({ Component, pageProps }) {
       <div className="menu-area">
         <p className="border-lineno"><Link to="/">Home</Link></p>
         <p className="border-line"><Link to="/product">Product</Link></p>
-        <p className="border-line"><Link to="/support">Support</Link></p>
+        {/*<p className="border-line"><Link to="/support">Support</Link></p>*/}
         <p className="border-line"><Link to="/contact">Contact</Link></p>
       </div>
       <div className="under-line1"/>
