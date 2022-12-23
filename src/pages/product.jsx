@@ -32,7 +32,6 @@ const ProductPage = () => (
                   <br/>
                   <span className={cx('product-title', 'serif')}>{product.jpName}</span>
                 </h2>
-                <br/>
                 <span className={cx('serif')}>{product.intro}</span>
                 <br/><br/>
                 <a
@@ -49,6 +48,7 @@ const ProductPage = () => (
                   target="_blank"
                   rel="noreferrer"
                 >READ MORE for minne</a>
+                <br/>
               </div>
             </>
           ))
