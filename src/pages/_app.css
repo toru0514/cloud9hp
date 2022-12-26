@@ -84,6 +84,7 @@ ul,
 li,
 div {
     display: block;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     border: 0;
@@ -115,6 +116,7 @@ button {
     padding: 2rem;
     z-index: 999;
     background-color: white;
+    /*position: fixed;*/
 }
 
 form {
