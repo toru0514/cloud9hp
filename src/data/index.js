@@ -12,6 +12,8 @@ const mapleImage = '/images/maple.png'
 const wengeImage = '/images/wenge.png'
 const rosewoodImage = '/images/rosewood.png'
 const padaukImage = '/images/padauk.png'
+const crystalEbonyImage = 'images/crystalEbony.png'
+const crystalKarinImage = 'images/crystalKarin.png'
 
 export const shop = {
   url: 'https://www.creema.jp/creator/7614629/item/onsale',
@@ -135,5 +137,27 @@ export const products = [
     jpName: 'cloud9 ウッドリング パドック',
     intro: '赤く美しいパドック。繊細だけどクールな赤、明るく前向きで情熱的な赤。そんなあなたの気持ちと共に寄り添ってくれる指輪です。',
     name: 'パドック',
+  },
+]
+export const productsCrystal = [
+  {
+    id: 'crystalEbony',
+    url: 'https://www.creema.jp/item/15236609/detail',
+    mUrl: 'https://minne.com/items/35274325',
+    image: crystalEbonyImage,
+    enName: 'cloud9 Crystal&WoodRing Ebony',
+    jpName: 'cloud9 クリスタル&ウッドリング エボニー',
+    intro: '赤く美しいパドック。繊細だけどクールな赤、明るく前向きで情熱的な赤。そんなあなたの気持ちと共に寄り添ってくれる指輪です。',
+    name: 'クリスタルエボニー',
+  },
+  {
+    id: 'crystalKarin',
+    url: 'https://www.creema.jp/item/15236735/detail',
+    mUrl: 'https://minne.com/items/34692090',
+    image: crystalKarinImage,
+    enName: 'cloud9 Crystal&WoodRing Karin',
+    jpName: 'cloud9 クリスタル&ウッドリング カリン',
+    intro: '赤く美しいパドック。繊細だけどクールな赤、明るく前向きで情熱的な赤。そんなあなたの気持ちと共に寄り添ってくれる指輪です。',
+    name: 'クリスタルカリン',
   },
 ]
