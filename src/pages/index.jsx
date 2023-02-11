@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './index.module.css'
 import { products, shop } from '../data'
 import classNames from 'classnames/bind'
-
+/**/
 const cx = classNames.bind(styles)
 const HomePage = () => {
   return (
