@@ -11,12 +11,15 @@ const ProductPage = () => (
       <div className={cx('product-title-area')}>
         <p className={cx('title-en')}>PRODUCTS</p>
         <p className={cx('title-jp')}>製品紹介</p>
-        <br/>
-        <p>Wood Ring</p>
-        <p>希少な木材を使用するオリジナルのウッドリング。</p>
-        <br/>
+        <div className={cx('title-area')}>
+          <div className={cx('product-title-area-en')}>
+            <p>Wood Ring</p>
+          </div>
+          <div className={cx('product-title-area-jp')}>
+            <p>希少な木材を使用するオリジナルのウッドリング。</p>
+          </div>
+        </div>
       </div>
-      <br/>
       <div className={cx('ring-repertory-area')}>
         {
           products.map((product) => (
@@ -54,10 +57,13 @@ const ProductPage = () => (
           ))
         }
       </div>
-      <div className={cx('product-title-area')}>
-        <p>Crystal & Wood Ring</p>
-        <p>オリジナルのウッドリングにクリスタルを<br/>埋め込んだクリスタルウッドリングになります。</p>
-        <br/>
+      <div className={cx('title-area')}>
+        <div className={cx('product-title-area-en')}>
+          <p>Crystal & Wood Ring</p>
+        </div>
+        <div className={cx('product-title-area-jp')}>
+          <p>オリジナルのウッドリングにクリスタルを<br/>埋め込んだクリスタルウッドリングになります。</p>
+        </div>
       </div>
       <div className={cx('ring-repertory-area')}>
         {

@@ -60,3 +60,18 @@
     display: block;
     margin-bottom: 5px;
 }
+
+.product-title-area-en {
+    font-family: serif;
+    font-size: 24px;
+}
+
+.product-title-area-jp {
+    font-family: serif;
+    font-size: 16px;
+}
+
+.title-area {
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
