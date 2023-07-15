@@ -14,6 +14,7 @@ const rosewoodImage = '/images/rosewood.png'
 const padaukImage = '/images/padauk.png'
 const crystalEbonyImage = 'images/crystalEbony.png'
 const crystalKarinImage = 'images/crystalKarin.png'
+const crystalRingImage = 'images/crystalRing.JPG'
 
 export const shop = {
   url: 'https://www.creema.jp/creator/7614629/item/onsale',
@@ -160,4 +161,37 @@ export const productsCrystal = [
     intro: 'クリスタルを埋め込んだウッドリングになります。『単色だと物足りなかった』『手元にはやっぱりキラキラした指輪をつけたい』そんなあなたのための指輪です。',
     name: 'クリスタルカリン',
   },
+]
+export const gallaryCrystal = [
+  {
+    id: 'crystalKarin',
+    url: 'https://www.creema.jp/item/15236735/detail',
+    mUrl: 'https://minne.com/items/34692090',
+    image: crystalKarinImage,
+    enName: 'cloud9 Crystal&WoodRing Karin',
+    jpName: 'cloud9 クリスタル&ウッドリング カリン',
+    intro: 'クリスタルを埋め込んだウッドリングになります。『単色だと物足りなかった』『手元にはやっぱりキラキラした指輪をつけたい』そんなあなたのための指輪です。',
+    name: 'クリスタルカリン',
+  },
+  {
+    id: 'crystalRing',
+    url: 'https://www.creema.jp/item/15236735/detail',
+    mUrl: 'https://minne.com/items/34692090',
+    image: crystalRingImage,
+    enName: 'cloud9 Crystal&WoodRing',
+    jpName: 'cloud9 クリスタル&ウッドリング',
+    intro: 'クリスタルを埋め込んだウッドリングになります。『単色だと物足りなかった』『手元にはやっぱりキラキラした指輪をつけたい』そんなあなたのための指輪です。',
+    name: 'クリスタルリング',
+  },
+  {
+    id: 'crystalEbony',
+    url: 'https://www.creema.jp/item/15236609/detail',
+    mUrl: 'https://minne.com/items/35274325',
+    image: crystalEbonyImage,
+    enName: 'cloud9 Crystal&WoodRing Ebony',
+    jpName: 'cloud9 クリスタル&ウッドリング エボニー',
+    intro: 'クリスタルを埋め込んだウッドリングになります。『単色だと物足りなかった』『手元にはやっぱりキラキラした指輪をつけたい』そんなあなたのための指輪です。',
+    name: 'クリスタルエボニー',
+  },
+
 ]
