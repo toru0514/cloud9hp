@@ -1,4 +1,9 @@
+.serif {
+    font-family: serif;
+}
+
 .gallery {
+    font-family: serif;
     margin: auto;
     width: 360px;
     display: flex;
@@ -14,10 +19,12 @@
 }
 
 .home-title {
+    font-family: serif;
     font-size: 24px;
 }
 
 .home-about-title {
+    font-family: serif;
     padding-top: 16px;
     padding-bottom: 16px;
     font-size: 20px;
@@ -25,10 +32,12 @@
 }
 
 .home-aboutus {
+    font-family: serif;
     font-size: 20px;
 }
 
 .home-product-area {
+    font-family: serif;
     text-align: center;
     font-size: 24px;
     margin-top: 30px;
@@ -36,18 +45,21 @@
 }
 
 .product-title {
+    font-family: serif;
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
 }
 
 .product-us {
+    font-family: serif;
     font-size: 18px;
     padding-top: 5px;
     padding-bottom: 10px;
 }
 
 .view-area {
+    font-family: serif;
     margin-top: 25px;
     margin-bottom: 50px;
     display: block;
@@ -55,6 +67,7 @@
 }
 
 .view-more {
+    font-family: serif;
     font-size: 18px;
     border: solid 1px black;
     padding: 10px 65px;
