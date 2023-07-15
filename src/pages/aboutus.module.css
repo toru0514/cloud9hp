@@ -1,0 +1,38 @@
+.aboutus-page {
+    text-align: center;
+}
+
+.shop-image {
+    width: 180px;
+}
+
+.home-aboutus-area {
+    text-align: center;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.home-about-title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.home-aboutus {
+    font-size: 16px;
+}
+
+.view-area {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    display: block;
+    text-align: center;
+}
+
+.view-more {
+    font-size: 18px;
+    border: solid 1px black;
+    padding: 10px 65px;
+}

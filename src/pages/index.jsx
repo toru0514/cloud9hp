@@ -27,17 +27,24 @@ const HomePage = () => {
             <p>- 『cloud9(クラウドナイン)』とは -</p>
           </div>
           <div className={cx('home-aboutus')}>
-            <p>「I’m on cloud9!!」という風に使われ、
-              「意気揚々」「最高の幸せ」「至福」
+            <p>「I’m on cloud9!!」という風に使われ、<br/>
+              「意気揚々」「最高の幸せ」「至福」<br/>
               という意味があります。<br/><br/>
 
-              我々が提供する商品で、
+              我々が提供する商品で、<br/>
               「cloud9な気持ちになっていただきたい」
               という想いを込めたブランドです。<br/><br/>
 
-              木材を使用した指輪/ネックレス等の
-              アクセサリーを始め、パネル制作等、
+              木材を使用した指輪/ネックレス等の<br/>
+              アクセサリーを始め、パネル制作等、<br/>
               木の加工相談も承っております。</p>
+          </div>
+          <div className={cx('view-area')}>
+            <a className={cx('view-more')}
+               href="/aboutus"
+               target="_self"
+               rel="noreferrer"
+            >ABOUT US</a>
           </div>
           <div className={cx('home-product-area')}>
             <p>-PRODUCT-</p>
