@@ -21,6 +21,8 @@ export default function MyApp ({ Component, pageProps }) {
           name="description"
           content="木材工房cloud9です。希少な木材を使用した高級アクセサリーを製作しているブランドです。"
         />
+        <meta name="facebook-domain-verification" content="your-code-here"/>
+        {'52k87tv0bp82w7htgc6v0g57lbjsct'}
         <link rel="apple-touch-icon" href="/logo192.png"/>
         <link rel="manifest" href="/manifest.json"/>
         <title>木材工房cloud9</title>
