@@ -1,7 +1,10 @@
+// app/(main)/layout.tsx
 import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
-import "./globals.css";
-import React from "react";
+import SimpleHeader from "@/components/Header/SimpleHeader";
+import FooterMenu from "@/components/Footer/FooterMenu";
+import "../globals.css";
+import React from "react"; // ← 相対パス注意！
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -18,17 +21,17 @@ export const metadata: Metadata = {
     description: "woodworking projects and tutorials",
 };
 
-export default function RootLayout({
+export default function MainLayout({
                                        children,
                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="jp">
-        <body
-            className={`font-mincho ${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-        {children}
+        <html lang="ja">
+        <body className={`font-mincho ${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <SimpleHeader/>
+        <main>{children}</main>
+        <FooterMenu/>
         </body>
         </html>
     );
