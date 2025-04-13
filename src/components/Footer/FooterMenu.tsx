@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const FooterMenu = () => {
     return (
-        <footer className="bg-neutral-900 text-white py-8 px-4 mt-12">
+        <footer className="bg-neutral-900 text-white py-8 px-4">
             <div className="max-w-screen-xl mx-auto">
                 <div className="flex justify-center">
                     <NavList isMobile={false} variant="footer"/>
