@@ -21,19 +21,19 @@ const HeaderMenu = () => {
         <div className="text-white p-0 relative">
             {/* ヘッダー画像 */}
             <div
-                className="w-full aspect-[16/9] sm:aspect-[16/8] md:aspect-[16/7] lg:aspect-[1280/630] relative overflow-hidden">
+                className="w-full relative overflow-hidden h-[400px] sm:h-[500px] md:h-[500px] lg:aspect-[1280/630] lg:h-auto">
                 <Image
                     src="/header/header.jpg"
                     alt="headerimage"
                     fill
-                    className={`object-cover transition-transform duration-[5000ms] ease-in-out ${
+                    className={`object-cover object-center transition-transform duration-[5000ms] ease-in-out ${
                         isZoomed ? "scale-100" : "scale-200"
                     }`}
                 />
             </div>
 
             {/* ロゴ */}
-            <div className="absolute top-0 left-1 lg:left-2 w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24 lg:w-42 lg:h-42">
+            <div className="absolute top-0 left-1 lg:left-2 w-18 h-18 sm:w-18 sm:h-18 md:w-24 md:h-24 lg:w-42 lg:h-42">
                 <Image src="/header/logo.png" alt="Overlay Logo" fill className="object-contain"/>
             </div>
 
@@ -43,13 +43,26 @@ const HeaderMenu = () => {
                     isVisible ? "translate-x-0 opacity-100" : "translate-x-[100%] opacity-0"
                 }`}
             >
-                <p className="text-xs sm:text-[22px] md:text-2xl lg:text-4xl font-semibold md:leading-8 lg:leading-12">
+                <p className="text-base sm:text-[22px] md:text-2xl lg:text-4xl font-semibold md:leading-8 lg:leading-12">
                     木のぬくもりと、<br/>最高の幸せをあなたに。
                 </p>
-                <p className="text-[8.5px] sm:text-base md:text-xl lg:text-2xl font-medium sm:mt-[5px] md:mt-1.5">
-                    身につけるだけで温もりが感じられて、あたたかい気持ちになれる
-                    <br/>
-                    あなたの日常に寄り添う、ウッドアクセサリー
+                {/*<p className="text-[8.5px] sm:text-base md:text-xl lg:text-2xl font-medium sm:mt-[5px] md:mt-1.5">*/}
+                {/*    身につけるだけで温もりが感じられて、あたたかい気持ちになれる*/}
+                {/*    <br/>*/}
+                {/*    あなたの日常に寄り添う、ウッドアクセサリー*/}
+                {/*</p>*/}
+                <p className="text-xs sm:text-base md:text-xl lg:text-2xl font-medium sm:mt-[5px] md:mt-1.5 leading-relaxed">
+                    <span className="block md:inline">
+                        身につけるだけで温もりが感じられて、
+                        <br className="block md:hidden"/>
+                        あたたかい気持ちになれる
+                    </span>
+                    <br className="hidden md:block"/>
+                    <span className="block md:inline">
+                        あなたの日常に寄り添う、
+                        <br className="block md:hidden"/>
+                        ウッドアクセサリー
+                    </span>
                 </p>
             </div>
 
