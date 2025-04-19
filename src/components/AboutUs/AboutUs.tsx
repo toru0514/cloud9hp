@@ -19,7 +19,7 @@ const FeaturesArea = () => {
 
                     <div className="w-full md:w-1/2">
                         <p className="sm:text-md md:text-lg lg:text-3xl leading-relaxed p-1 font-semibold">
-                            -『Cloud9(クラウドナイン)』とは -
+                            -『cloud9(クラウドナイン)』とは -
                         </p>
                         <p className="text-xs sm:text-xs md:text-sm lg:text-lg xl:text-xl leading-relaxed p-1 max-w-prose font-medium">
                             「I am on cloud9!!」という風に使われ、<br/>

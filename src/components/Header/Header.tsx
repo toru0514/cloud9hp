@@ -33,7 +33,7 @@ const HeaderMenu = () => {
             </div>
 
             {/* ロゴ */}
-            <div className="absolute top-0 left-1 lg:left-2 w-18 h-18 sm:w-18 sm:h-18 md:w-24 md:h-24 lg:w-42 lg:h-42">
+            <div className="absolute top-0 left-1 lg:left-2 w-20 h-20 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-42 lg:h-42">
                 <Image src="/header/logo.png" alt="Overlay Logo" fill className="object-contain"/>
             </div>
 
@@ -43,15 +43,10 @@ const HeaderMenu = () => {
                     isVisible ? "translate-x-0 opacity-100" : "translate-x-[100%] opacity-0"
                 }`}
             >
-                <p className="text-base sm:text-[22px] md:text-2xl lg:text-4xl font-semibold md:leading-8 lg:leading-12">
+                <p className="text-lg sm:text-[24px] md:text-2xl lg:text-4xl font-[650] md:leading-8 lg:leading-12">
                     木のぬくもりと、<br/>最高の幸せをあなたに。
                 </p>
-                {/*<p className="text-[8.5px] sm:text-base md:text-xl lg:text-2xl font-medium sm:mt-[5px] md:mt-1.5">*/}
-                {/*    身につけるだけで温もりが感じられて、あたたかい気持ちになれる*/}
-                {/*    <br/>*/}
-                {/*    あなたの日常に寄り添う、ウッドアクセサリー*/}
-                {/*</p>*/}
-                <p className="text-xs sm:text-base md:text-xl lg:text-2xl font-medium sm:mt-[5px] md:mt-1.5 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-xl lg:text-2xl font-[500] sm:mt-[5px] md:mt-1.5 leading-tight sm:leading-relaxed">
                     <span className="block md:inline">
                         身につけるだけで温もりが感じられて、
                         <br className="block md:hidden"/>
@@ -59,9 +54,7 @@ const HeaderMenu = () => {
                     </span>
                     <br className="hidden md:block"/>
                     <span className="block md:inline">
-                        あなたの日常に寄り添う、
-                        <br className="block md:hidden"/>
-                        ウッドアクセサリー
+                        あなたの日常に寄り添う、ウッドアクセサリー
                     </span>
                 </p>
             </div>

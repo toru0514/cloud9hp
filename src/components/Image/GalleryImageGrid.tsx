@@ -6,18 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 
-const getRandomImage = (excludeUrl: string): (typeof GalleryImageData)[0] => {
-    const filtered = GalleryImageData.filter((img) => img.url !== excludeUrl);
+const getRandomImage = (excludeUrls: string[]): (typeof GalleryImageData)[0] => {
+    const filtered = GalleryImageData.filter((img) => !excludeUrls.includes(img.url));
     return filtered[Math.floor(Math.random() * filtered.length)];
 };
 
 const GalleryImageGrid = () => {
-    const [images, setImages] = useState(() => [
-        GalleryImageData[0],
-        GalleryImageData[1],
-    ]);
-    const [fade, setFade] = useState([true, true]); // 画像ごとのフェード状態
-    const [activeIndex, setActiveIndex] = useState(0); // 0か1を交互に切り替える
+    const [images, setImages] = useState(() => GalleryImageData.slice(0, 4));
+    const [fade, setFade] = useState([true, true, true, true]);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -30,33 +27,35 @@ const GalleryImageGrid = () => {
             setTimeout(() => {
                 setImages((prev) => {
                     const next = [...prev];
-                    next[activeIndex] = getRandomImage(prev[activeIndex].url);
+                    const excludeUrls = prev.map((img) => img.url);
+                    next[activeIndex] = getRandomImage(excludeUrls);
                     return next;
                 });
+
                 setFade((prev) => {
                     const next = [...prev];
                     next[activeIndex] = true;
                     return next;
                 });
-                setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-            }, 1500); // フェードアウト後に変更
-        }, 5000); // 4秒ごとに交互に切り替え
+
+                setActiveIndex((prev) => (prev + 1) % 4); // 0→1→2→3→0…
+            }, 1500);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [activeIndex]);
 
     return (
-        <div className="grid grid-cols-2 sm:px-2 md:px-10 lg:px-20 gap-1.5 sm:gap-3 md:gap-4">
+        <div className="grid grid-cols-2 grid-rows-2 sm:px-2 md:px-10 lg:px-20 gap-1.5 sm:gap-3 md:gap-4">
             {images.map((image, index) => (
-                <div key={index} className="flex flex-col">
+                <div key={index} className="aspect-square relative overflow-hidden">
                     <Link href={image.link}>
                         <Image
                             src={image.url}
                             alt={image.alt}
-                            width={600}
-                            height={600}
+                            fill
                             className={clsx(
-                                "object-cover w-full h-full min-w-[80px] min-h-[80px] transition-opacity duration-1500",
+                                "object-cover w-full h-full transition-opacity duration-1500",
                                 fade[index] ? "opacity-100" : "opacity-0"
                             )}
                         />
