@@ -9,7 +9,7 @@ const GalleryArea = () => {
         <GalleryImageGrid/>
       </div>
       <div className="items-center flex justify-center pt-6">
-        <Button link="/features"/>
+        <Button link="/gallery"/>
       </div>
     </div>
   );
