@@ -1,0 +1,48 @@
+.swiper-button-prev,
+.swiper-button-next {
+    color: #000000;
+    transition: color 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 0.5rem;
+}
+
+.swiper-button-next {
+    right: 0.5rem;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #666666;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 32px;
+}
+
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}
+
+.custom-pagination {
+    text-align: center;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+    background: #999;
+    opacity: 0.5;
+    margin: 0 4px;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+    background: #000;
+    opacity: 1;
+}
