@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import SectionContainer from "@/components/ui/SectionContainer";
+import SectionTitle from "@/components/ui/SectionTitle";
 
-const FeaturesArea = () => {
+const AboutusArea = () => {
   return (
-    <div className="p-3 lg:p-8 xl:p-10 bg-neutral-200">
-      <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold">ABOUT US</h2>
+    <SectionContainer className="bg-neutral-200">
+      <SectionTitle>ABOUT US</SectionTitle>
       <div className="px-6 lg:px-30 py-5">
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="w-full md:w-1/2">
@@ -42,11 +44,11 @@ const FeaturesArea = () => {
           </div>
         </div>
         <div className="items-center flex justify-center pt-6">
-          <Button link="/features"/>
+          <Button link="/about"/>
         </div>
       </div>
-    </div>
+    </SectionContainer>
   );
 };
 
-export default FeaturesArea;
+export default AboutusArea;

@@ -3,17 +3,19 @@ import CrystalWoodringArea from "@/components/Product/CrystalWoodRing/CrystalWoo
 import BangleArea from "@/components/Product/Bangle/Bangle";
 import EarcuffArea from "@/components/Product/Earcuff/Earcuff";
 import EarcuffLeafArea from "@/components/Product/EarcuffLeaf/EarcuffLeaf";
+import SectionContainer from "@/components/ui/SectionContainer";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const ProductArea = () => {
   return (
-    <div className="p-3 lg:p-6">
-      <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold">PRODUCT</h2>
+    <SectionContainer>
+      <SectionTitle>PRODUCT</SectionTitle>
       <WoodringArea/>
       <CrystalWoodringArea/>
       <BangleArea/>
       <EarcuffArea/>
       <EarcuffLeafArea/>
-    </div>
+    </SectionContainer>
   );
 };
 

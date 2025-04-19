@@ -1,17 +1,19 @@
 import Button from "@/components/ui/Button";
 import GalleryImageGrid from "@/components/Image/GalleryImageGrid";
+import SectionContainer from "@/components/ui/SectionContainer";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const GalleryArea = () => {
   return (
-    <div className="p-3 lg:p-8 xl:p-10 bg-amber-20">
-      <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold">GALLERY</h2>
+    <SectionContainer className="bg-amber-20">
+      <SectionTitle>GALLERY</SectionTitle>
       <div className="lg:px-30 pt-2">
         <GalleryImageGrid/>
       </div>
       <div className="items-center flex justify-center pt-6">
         <Button link="/gallery"/>
       </div>
-    </div>
+    </SectionContainer>
   );
 };
 

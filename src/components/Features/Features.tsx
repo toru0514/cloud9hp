@@ -10,10 +10,12 @@ import "@/styles/features.css";
 import {featureData} from "@/data/featureData";
 import {FeatureSlide} from "@/components/Features/FeatureSlide";
 import Button from "@/components/ui/Button";
+import SectionContainer from "@/components/ui/SectionContainer";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 const FeaturesArea = () => (
-  <div className="p-3 lg:p-8 xl:p-10 bg-neutral-200 relative">
-    <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold">FEATURES</h2>
+  <SectionContainer className="bg-neutral-200 relative">
+    <SectionTitle>FEATURES</SectionTitle>
 
     <div className="px-6 sm:pt-10 sm:pb-10 relative">
       <Swiper
@@ -39,7 +41,7 @@ const FeaturesArea = () => (
     </div>
 
     <div className="custom-pagination pt-6 flex justify-center"/>
-  </div>
+  </SectionContainer>
 );
 
 export default FeaturesArea;
