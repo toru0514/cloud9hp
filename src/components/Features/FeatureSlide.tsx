@@ -21,7 +21,8 @@ export const FeatureSlide = ({feature}: { feature: Feature }) => (
     </div>
     <div className="w-full md:w-1/2 pr-10">
       <p className="sm:text-md md:text-lg lg:text-3xl font-semibold p-1">{feature.title}</p>
-      <p className="text-xs sm:text-sm md:text-base lg:text-[20px] xl:text-2xl leading-relaxed p-1 whitespace-pre-line">
+      <p
+        className="text-sm sm:text-sm md:text-base lg:text-[20px] xl:text-xl 2xl:text-2xl leading-relaxed p-1 whitespace-pre-line">
         {feature.description}
       </p>
     </div>

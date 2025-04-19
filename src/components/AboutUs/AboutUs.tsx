@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 
 const FeaturesArea = () => {
   return (
-    <div className="p-6 lg:p-8 xl:p-10 bg-neutral-200">
+    <div className="p-3 lg:p-8 xl:p-10 bg-neutral-200">
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold">ABOUT US</h2>
       <div className="px-6 lg:px-30 py-5">
         <div className="flex flex-col md:flex-row items-center gap-6">
@@ -22,7 +22,7 @@ const FeaturesArea = () => {
               -『cloud9(クラウドナイン)』とは -
             </p>
             <p
-              className="text-xs sm:text-xs md:text-sm lg:text-lg xl:text-xl leading-relaxed p-1 max-w-prose font-medium">
+              className="text-md sm:text-md md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-relaxed p-1 max-w-prose font-medium">
               「I am on cloud9!!」という風に使われ、<br/>
               「意気揚々」「最高の幸せ」「至福」<br/>
               という意味があります。<br/><br/>

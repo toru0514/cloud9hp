@@ -33,8 +33,9 @@ const FeaturesPage = () => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-2">{feature.title}</h2>
-              <p className="text-sm sm:text-base lg:text-lg whitespace-pre-line leading-relaxed">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-2">{feature.title}</h2>
+              <p
+                className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl whitespace-pre-line leading-relaxed">
                 {feature.description}
               </p>
             </div>
