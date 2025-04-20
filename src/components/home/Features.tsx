@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "@/styles/features.css";
 
 import {featureData} from "@/data/featureData";
-import {FeatureSlide} from "@/components/Features/FeatureSlide";
+import {FeatureSlide} from "@/components/home/features/FeatureSlide";
 import Button from "@/components/ui/Button";
 import SectionContainer from "@/components/ui/SectionContainer";
 import SectionTitle from "@/components/ui/SectionTitle";

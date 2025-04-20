@@ -1,12 +1,12 @@
 "use client";
 
-import SideMenu from "@/components/SideMenu/SideMenu";
-import HamburgerMenu from "@/components/Navigation/HamburgerMenu"; // ✅ ここを修正！
+import SideMenu from "@/components/layout/SideMenu";
+import HamburgerMenu from "@/components/layout/HamburgerMenu";
 import Image from "next/image";
 import {useEffect, useState} from "react";
 import {HeaderImageData} from "@/data/imageData";
 
-const HeaderMenu = () => {
+const Header = () => {
   const headerImg = HeaderImageData[0];
   const [isZoomed, setIsZoomed] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -70,4 +70,4 @@ const HeaderMenu = () => {
   );
 };
 
-export default HeaderMenu;
+export default Header;

@@ -3,8 +3,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import SideMenu from "@/components/SideMenu/SideMenu";
-import HamburgerMenu from "@/components/Navigation/HamburgerMenu";
+import SideMenu from "@/components/layout/SideMenu";
+import HamburgerMenu from "@/components/layout/HamburgerMenu";
 
 const SimpleHeader = () => {
   return (
@@ -21,7 +21,7 @@ const SimpleHeader = () => {
 
       {/* ロゴ：中央に絶対配置 */}
       <Link
-        href="/"
+        href="/public"
         className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
       >
         <div className="relative w-24 h-24 sm:w-24 sm:h-24 lg:w-28 lg:h-28 p-10">

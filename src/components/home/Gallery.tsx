@@ -1,5 +1,5 @@
 import Button from "@/components/ui/Button";
-import GalleryImageGrid from "@/components/Image/GalleryImageGrid";
+import GalleryImageGrid from "@/components/image/GalleryImageGrid";
 import SectionContainer from "@/components/ui/SectionContainer";
 import SectionTitle from "@/components/ui/SectionTitle";
 

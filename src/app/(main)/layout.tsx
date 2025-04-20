@@ -1,7 +1,7 @@
 // 修正後の app/(main)/layout.tsx
 import type {Metadata} from "next";
-import SimpleHeader from "@/components/Header/SimpleHeader";
-import FooterMenu from "@/components/Footer/FooterMenu";
+import SimpleHeader from "@/components/layout/SimpleHeader";
+import Footer from "@/components/layout/Footer";
 import "../globals.css";
 import React from "react";
 
@@ -19,7 +19,7 @@ export default function MainLayout({
     <>
       <SimpleHeader/>
       <main>{children}</main>
-      <FooterMenu/>
+      <Footer/>
     </>
   );
 }

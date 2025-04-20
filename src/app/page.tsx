@@ -1,23 +1,23 @@
-import ProductArea from "@/components/Product/Product";
-import FeaturesArea from "@/components/Features/Features";
-import GalleryArea from "@/components/Gallery/Gallery";
+import ProductArea from "@/components/home/Product";
+import FeaturesArea from "@/components/home/Features";
+import GalleryArea from "@/components/home/Gallery";
 // import VoiceArea from "@/components/Voice/Voice";
-import AboutUsArea from "@/components/AboutUs/AboutUs";
-import HeaderMenu from "@/components/Header/Header";
-import FooterMenu from "@/components/Footer/FooterMenu";
+import AboutUsArea from "@/components/home/AboutUs";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
-    return (
-        <div>
-            <HeaderMenu/>
-            <main>
-                <ProductArea/>
-                <FeaturesArea/>
-                <GalleryArea/>
-                {/*<VoiceArea />*/}
-                <AboutUsArea/>
-            </main>
-            <FooterMenu/>
-        </div>
-    );
+  return (
+    <div>
+      <Header/>
+      <main>
+        <ProductArea/>
+        <FeaturesArea/>
+        <GalleryArea/>
+        {/*<VoiceArea />*/}
+        <AboutUsArea/>
+      </main>
+      <Footer/>
+    </div>
+  );
 }

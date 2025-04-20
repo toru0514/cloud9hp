@@ -1,8 +1,8 @@
-import WoodringArea from "@/components/Product/Woodring/Woodring";
-import CrystalWoodringArea from "@/components/Product/CrystalWoodRing/CrystalWoodRing";
-import BangleArea from "@/components/Product/Bangle/Bangle";
-import EarcuffArea from "@/components/Product/Earcuff/Earcuff";
-import EarcuffLeafArea from "@/components/Product/EarcuffLeaf/EarcuffLeaf";
+import WoodringArea from "@/components/home/product/Woodring/Woodring";
+import CrystalWoodringArea from "@/components/home/product/CrystalWoodRing/CrystalWoodRing";
+import BangleArea from "@/components/home/product/Bangle/Bangle";
+import EarcuffArea from "@/components/home/product/Earcuff/Earcuff";
+import EarcuffLeafArea from "@/components/home/product/EarcuffLeaf/EarcuffLeaf";
 import SectionContainer from "@/components/ui/SectionContainer";
 import SectionTitle from "@/components/ui/SectionTitle";
 

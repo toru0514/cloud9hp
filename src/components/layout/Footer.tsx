@@ -1,7 +1,7 @@
-import NavList from "@/components/Common/Nav/NavList";
+import NavList from "@/components/common/Nav/NavList";
 import Image from "next/image";
 
-const FooterMenu = () => {
+const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-white py-4 sm:py-8 px-4">
       <div className="max-w-screen-xl mx-auto">
@@ -26,4 +26,4 @@ const FooterMenu = () => {
   );
 };
 
-export default FooterMenu;
+export default Footer;

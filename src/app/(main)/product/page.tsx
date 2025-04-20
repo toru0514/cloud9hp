@@ -6,8 +6,8 @@ import {
   earcuffItems,
   earcuffleafItems,
   woodringItems,
-} from "@/components/Product/productData";
-import {ProductCard} from "@/components/Product/ProductCard";
+} from "@/components/home/product/productData";
+import {ProductCard} from "@/components/home/product/ProductCard";
 import React from "react";
 
 const productSections = [

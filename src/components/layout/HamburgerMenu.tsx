@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 import {HiOutlineMenu, HiOutlineX} from "react-icons/hi";
-import SideMenu from "@/components/SideMenu/SideMenu";
+import SideMenu from "@/components/layout/SideMenu";
 
 const HamburgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
