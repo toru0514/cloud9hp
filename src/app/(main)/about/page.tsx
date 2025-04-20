@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import {AboutImageData} from "@/data/imageData";
 
 
 const AboutPage = () => {
+  const aboutImg = AboutImageData[0];
   return (
     <div className="text-gray-800">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center py-12">ABOUTUS</h1>
@@ -13,8 +15,8 @@ const AboutPage = () => {
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="w-full md:w-1/2">
               <Image
-                src="/about/image1.jpeg" // 実際の画像パスに変更してください
-                alt="aboutイメージ"
+                src={aboutImg.url}
+                alt={aboutImg.alt}
                 width={600}
                 height={600}
                 className="w-full h-auto object-cover"

@@ -2,8 +2,10 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import SectionContainer from "@/components/ui/SectionContainer";
 import SectionTitle from "@/components/ui/SectionTitle";
+import {AboutImageData} from "@/data/imageData";
 
 const AboutusArea = () => {
+  const aboutImg = AboutImageData[0];
   return (
     <SectionContainer className="bg-neutral-200">
       <SectionTitle>ABOUT US</SectionTitle>
@@ -11,8 +13,8 @@ const AboutusArea = () => {
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="w-full md:w-1/2">
             <Image
-              src="/about/image1.jpeg" // 実際の画像パスに変更してください
-              alt="aboutイメージ"
+              src={aboutImg.url}
+              alt={aboutImg.alt}
               width={600}
               height={600}
               className="w-full h-auto object-cover"

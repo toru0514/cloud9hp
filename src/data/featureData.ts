@@ -2,7 +2,7 @@
 
 export const featureData = [
   {
-    image: "/features/image1.jpeg",
+    image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/bdbfbabb5e88406ba649ea69851a2808/image1.jpeg",
     title: "◆着け心地・木の温もり",
     description: `木のテーブルや木造の家、素足で触れた床。
 そんなときに、どこかホッとするような安心感を感じたことはありませんか？
@@ -14,7 +14,7 @@ export const featureData = [
 そっと寄り添うような存在を、ぜひ日常に取り入れてみてください。`,
   },
   {
-    image: "/features/image2.jpeg",
+    image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/77d7fd3c6c1f4696916a73178a5f0217/image2.jpeg",
     title: "◆防水性",
     description: `木のアクセサリーは「濡れても大丈夫？」とご心配される方もいらっしゃるかもしれません。
 当製品には蜜蝋ワックスを少量塗布しており、軽い水濡れ程度であれば問題ありません。
@@ -22,7 +22,7 @@ export const featureData = [
 ワックスは自然素材のため、落ちてきた際は市販の蜜蝋ワックスで簡単にお手入れが可能です。`,
   },
   {
-    image: "/features/image3.jpeg",
+    image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/223ad0b336374259991981e913e16762/image3.jpeg",
     title: "◆金属アレルギー対応",
     description: `指輪やイヤーアクセサリー、バングルなどは一般的に金属製のものが多く、
 金属アレルギーのために身につけられない方も少なくありません。
@@ -32,7 +32,7 @@ export const featureData = [
 ※ピアスなど、一部アイテムには金属パーツ（サージカルステンレス）を使用しております。`,
   },
   {
-    image: "/features/image4.jpeg",
+    image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/e96d410e42d349a9a65911aaa1213dcc/image4.jpeg",
     title: "◆希少性",
     description: `日本では欅や檜などが知られ、SPF材やホワイトウッドなどが身近にありますが、当製品には、世界中で育まれた希少な木材を使用しています。
 中には現在ではほとんど手に入らないものもあり、同じ製品を再び作れない可能性もあります。
@@ -42,7 +42,7 @@ export const featureData = [
 そんな儚くも美しい木の世界を、ぜひお楽しみください。`,
   },
   {
-    image: "/features/image5.jpeg",
+    image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/16322b3520cd46be877817656849e926/image5.jpeg",
     title: "◆無着色",
     description: `木材といえば茶色や白を思い浮かべる方も多いかもしれませんが、
 当製品では、紫・ピンク・黒・白黒・茶黒など、
