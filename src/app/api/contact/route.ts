@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
   const adminMail = {
     from: `"Cloud9 Form" <${process.env.GMAIL_USER}>`,
     to: process.env.GMAIL_USER,
-    subject: "【お問い合わせ】Cloud9 ホームページより",
+    subject: "【お問い合わせ】木材工房cloud9 ホームページより",
     text: `
 お名前: ${name}
 メールアドレス: ${email}
@@ -32,11 +32,11 @@ ${content}
   const userMail = {
     from: `"Cloud9 Woodwork" <${process.env.GMAIL_USER}>`,
     to: email,
-    subject: "【木材工房Cloud9】お問い合わせありがとうございます",
+    subject: "【木材工房cloud9】お問い合わせありがとうございます",
     text: `
 ${name} 様
 
-木材工房Cloud9へのお問い合わせありがとうございます。
+木材工房cloud9へのお問い合わせありがとうございます。
 以下の内容でお問い合わせを受け付けました。
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -51,7 +51,7 @@ ${content}
 今しばらくお待ちくださいませ。
 
 ────────────────────
-木材工房Cloud9
+木材工房cloud9
 https://cloud9woodwork.com/
 Email: cloud9woodwork@gmail.com
 ────────────────────

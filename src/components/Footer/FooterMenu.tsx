@@ -19,7 +19,7 @@ const FooterMenu = () => {
           </div>
         </div>
         <p className="text-center text-xs">
-          &copy; {new Date().getFullYear()} 木材工房 Cloud9 All rights reserved.
+          &copy; {new Date().getFullYear()} 木材工房cloud9 All rights reserved.
         </p>
       </div>
     </footer>
