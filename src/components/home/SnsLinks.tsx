@@ -9,9 +9,9 @@ const SnsLinks = () => {
   const isMobile = useMediaQuery("(max-width: 640px)");
 
   return (
-    <SectionContainer className="bg-amber-20">
+    <SectionContainer>
       <SectionTitle>OFFICIAL LINKS</SectionTitle>
-      <div className="grid grid-cols-5 gap-2 sm:gap-6 max-w-5xl mx-auto sm:px-4 mt-5">
+      <div className="grid grid-cols-5 gap-2 sm:gap-6 max-w-5xl mx-auto sm:px-4 mt-5 bg-amber-20">
         {snsLinks.map((sns, i) => {
           const src = isMobile
             ? sns.icon.replace(".", "_sp.") // 例：creema.jpg → creema-sp.jpg に変換
