@@ -1,26 +1,42 @@
+'use client'
+
 import {snsLinks} from "@/data/snsLinks";
 import SectionTitle from "@/components/ui/SectionTitle";
 import SectionContainer from "@/components/ui/SectionContainer";
+import {useMediaQuery} from "@/hooks/useMediaQuery";
 
-const SnsLinks = () => (
-  <SectionContainer>
-    <SectionTitle>OFFICIAL LINKS</SectionTitle>
-    <div className="grid sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto px-4 mt-5">
-      {snsLinks.map((sns, i) => (
-        <a
-          key={i}
-          href={sns.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white hover:shadow-lg transition p-4 rounded-xl text-center"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={sns.icon} alt={sns.name} className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto object-contain"/>
-          {/*<p className="text-sm text-gray-800">{sns.message}</p>*/}
-        </a>
-      ))}
-    </div>
-  </SectionContainer>
-);
+const SnsLinks = () => {
+  const isMobile = useMediaQuery("(max-width: 640px)");
+
+  return (
+    <SectionContainer className="bg-amber-20">
+      <SectionTitle>OFFICIAL LINKS</SectionTitle>
+      <div className="grid grid-cols-5 gap-2 sm:gap-6 max-w-5xl mx-auto sm:px-4 mt-5">
+        {snsLinks.map((sns, i) => {
+          const src = isMobile
+            ? sns.icon.replace(".", "_sp.") // 例：creema.jpg → creema-sp.jpg に変換
+            : sns.icon;
+
+          return (
+            <a
+              key={i}
+              href={sns.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white hover:shadow-lg transition p-4 rounded-xl text-center"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={src}
+                alt={sns.name}
+                className="h-8 sm:h-12 md:h-14 lg:h-16 w-auto mx-auto object-contain"
+              />
+            </a>
+          );
+        })}
+      </div>
+    </SectionContainer>
+  );
+};
 
 export default SnsLinks;
