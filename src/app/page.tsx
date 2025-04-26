@@ -6,6 +6,7 @@ import AboutUsArea from "@/components/home/AboutUs";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SnsLinks from "@/components/home/SnsLinks";
+import ReviewArea from "@/components/home/Review";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <GalleryArea/>
         {/*<VoiceArea />*/}
         <AboutUsArea/>
+        <ReviewArea/>
         <SnsLinks/>
       </main>
       <Footer/>
