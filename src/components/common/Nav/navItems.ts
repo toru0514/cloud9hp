@@ -10,5 +10,8 @@ export const navItems: NavItemType[] = [
   {id: 3, label: "FEATURES", link: "/features"},
   {id: 4, label: "GALLERY", link: "/gallery"},
   {id: 5, label: "ABOUT", link: "/about"},
-  {id: 6, label: "CONTACT", link: "/contact"},
+  {id: 6, label: "ORDER", link: "/order-made"},
+  {id: 7, label: "CONTACT", link: "/contact"},
 ];
+
+//order-made
