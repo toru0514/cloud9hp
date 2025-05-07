@@ -1,14 +1,24 @@
+// src/app/(main)/order-made/[slug]/page.tsx
+
 import {orderMadeData} from "@/data/orderMadeData";
 import {notFound} from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
-type Props = {
-  params: { slug: string };
-};
+// 静的パスを生成
+export async function generateStaticParams() {
+  return orderMadeData.map((item) => ({
+    slug: item.slug,
+  }));
+}
 
-const OrderMadeDetailPage = ({params}: Props) => {
-  const index = orderMadeData.findIndex((item) => item.slug === params.slug);
+// ページコンポーネント
+export default async function OrderMadeDetailPage(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const {slug} = await props.params;
+
+  const index = orderMadeData.findIndex((item) => item.slug === slug);
   if (index === -1) notFound();
 
   const order = orderMadeData[index];
@@ -17,7 +27,7 @@ const OrderMadeDetailPage = ({params}: Props) => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      {/* トップに戻る */}
+      {/* 戻るリンク */}
       <div className="mb-6">
         <Link href="/order-made" className="text-blue-500 hover:underline text-sm">
           ← ORDER MADE一覧に戻る
@@ -25,9 +35,11 @@ const OrderMadeDetailPage = ({params}: Props) => {
       </div>
 
       {/* タイトル */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8">{order.title}</h1>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8">
+        {order.title}
+      </h1>
 
-      {/* 複数画像表示 */}
+      {/* 画像 */}
       {order.images.length === 1 ? (
         <div className="mb-8 flex justify-center">
           <div className="relative w-full max-w-md aspect-square">
@@ -54,48 +66,42 @@ const OrderMadeDetailPage = ({params}: Props) => {
         </div>
       )}
 
-
-      {/* 詳細説明 */}
+      {/* 詳細 */}
       <div className="text-gray-700 text-base mb-6 whitespace-pre-line">
         {order.detail}
       </div>
 
-      {/* 細かい情報 */}
+      {/* 情報 */}
       <div className="text-gray-600 text-sm mb-10 space-y-1">
         <div>使用木材: {order.wood}</div>
         <div>
           制作目安日数:{" "}
-          {order.days !== undefined ? (
-            `${order.days}日`
-          ) : (
-            <span className="text-gray-400">要相談</span>
-          )}
+          {order.days !== undefined ? `${order.days}日` : <span className="text-gray-400">要相談</span>}
         </div>
         <div>
-          {order.price !== undefined ? (
-            `目安価格: ¥${order.price.toLocaleString()}〜（税込）`
-          ) : (
-            <span className="text-gray-400">目安価格: 応相談</span>
-          )}
+          {order.price !== undefined
+            ? `目安価格: ¥${order.price.toLocaleString()}〜（税込）`
+            : <span className="text-gray-400">目安価格: 応相談</span>}
         </div>
       </div>
 
-      {/* 前後ナビゲーション */}
+      {/* 前後リンク */}
       <div className="flex justify-between text-sm">
         {prevOrder ? (
           <Link href={`/order-made/${prevOrder.slug}`} className="text-blue-500 hover:underline">
             ← {prevOrder.title}
           </Link>
-        ) : <div/>}
-
+        ) : (
+          <div/>
+        )}
         {nextOrder ? (
           <Link href={`/order-made/${nextOrder.slug}`} className="text-blue-500 hover:underline ml-auto">
             {nextOrder.title} →
           </Link>
-        ) : <div/>}
+        ) : (
+          <div/>
+        )}
       </div>
     </div>
   );
-};
-
-export default OrderMadeDetailPage;
+}
