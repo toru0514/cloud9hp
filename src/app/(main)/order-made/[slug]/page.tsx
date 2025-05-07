@@ -4,6 +4,26 @@ import {orderMadeData} from "@/data/orderMadeData";
 import {notFound} from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import {Metadata} from "next";
+
+export async function generateMetadata({
+                                         params,
+                                       }: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const order = orderMadeData.find((item) => item.slug === params.slug);
+
+  if (!order) {
+    return {
+      title: "ページが見つかりません | cloud9woodwork",
+    };
+  }
+
+  return {
+    title: `${order.title} | cloud9woodwork`,
+    description: order.description?.slice(0, 100),
+  };
+}
 
 // 静的パスを生成
 export async function generateStaticParams() {

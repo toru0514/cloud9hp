@@ -7,7 +7,7 @@ export const orderMadeData = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/bc088ec1d1c64b87b2683f8330bb81d3/IMG_5707.jpeg",
     images: [
       "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/bc088ec1d1c64b87b2683f8330bb81d3/IMG_5707.jpeg",
-      "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/bc088ec1d1c64b87b2683f8330bb81d3/IMG_5707.jpeg"
+      "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/169b425baea74f5cbe48c55634815c9d/IMG_5708.jpeg"
     ],
     days: 5,
     price: 5000,
