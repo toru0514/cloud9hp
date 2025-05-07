@@ -1,5 +1,3 @@
-// src/components/Common/Nav/NavItem.tsx
-
 import Link from "next/link";
 import React from "react";
 
@@ -18,10 +16,8 @@ const NavItem: React.FC<NavItemProps> = ({label, link, variant = "header"}) => {
         : "sm:text-base md:text-xl lg:text-[26px]";
 
   return (
-    <Link href={link}>
-      <div className={`${textSizeClass} hover:underline`}>
-        {label}
-      </div>
+    <Link href={link} className={`${textSizeClass} hover:underline`}>
+      <span>{label}</span>
     </Link>
   );
 };
