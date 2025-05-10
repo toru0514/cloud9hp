@@ -6,11 +6,9 @@ import Link from "next/link";
 import Image from "next/image";
 import {Metadata} from "next";
 
-export async function generateMetadata({
-                                         params,
-                                       }: {
-  params: { slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  {params}: { params: { slug: string } }
+): Promise<Metadata> {
   const order = orderMadeData.find((item) => item.slug === params.slug);
 
   if (!order) {
@@ -32,11 +30,13 @@ export async function generateStaticParams() {
   }));
 }
 
-// ページコンポーネント
-export default async function OrderMadeDetailPage(props: {
-  params: Promise<{ slug: string }>;
+// ✅ 修正済: Promise<{ slug: string }> → { slug: string }
+export default async function OrderMadeDetailPage({
+                                                    params,
+                                                  }: {
+  params: { slug: string };
 }) {
-  const {slug} = await props.params;
+  const {slug} = params;
 
   const index = orderMadeData.findIndex((item) => item.slug === slug);
   if (index === -1) notFound();

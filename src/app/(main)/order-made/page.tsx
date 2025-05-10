@@ -1,5 +1,3 @@
-"use client";
-
 import {orderMadeData} from "@/data/orderMadeData";
 import Image from "next/image";
 import Link from "next/link";
