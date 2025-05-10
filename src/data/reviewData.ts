@@ -70,11 +70,16 @@ export const reviewData = [
     comment: "存在感アリアリなのに軽くて使いやすそうです。ありがとうございました",
     rating: 5,
   },
+  {
+    platform: "minne",
+    comment: "この度はありがとうございます。とってもデザインが気に入りました!!大切にします。",
+    rating: 5,
+  },
 ];
 
 
 //  {
-//     platform: "Creema",
-//     comment: "存在感アリアリなのに軽くて使いやすそうです。ありがとうございました",
+//     platform: "minne",
+//     comment: "この度はありがとうございます。とってもデザインが気に入りました!!大切にします。",
 //     rating: 5,
 //   },
