@@ -1,4 +1,4 @@
-import WoodringImageGrid from "@/components/image/WoodringImageGrid";
+import WoodringImageGrid from "@/components/image/product/WoodringImageGrid";
 import Button from "@/components/ui/Button";
 
 const WoodringArea = () => {

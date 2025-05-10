@@ -1,5 +1,5 @@
 import Button from "@/components/ui/Button";
-import BangleImageGrid from "@/components/image/BangleImageGrid";
+import BangleImageGrid from "@/components/image/product/BangleImageGrid";
 
 const BangleArea = () => {
   return (

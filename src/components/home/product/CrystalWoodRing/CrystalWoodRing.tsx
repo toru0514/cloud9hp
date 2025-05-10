@@ -1,5 +1,5 @@
 import Button from "@/components/ui/Button";
-import CrystalWoodringImageGrid from "@/components/image/CrystalWoodringImageGrid";
+import CrystalWoodringImageGrid from "@/components/image/product/CrystalWoodringImageGrid";
 
 const CristalWoodringArea = () => {
   return (

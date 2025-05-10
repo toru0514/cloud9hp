@@ -1,4 +1,4 @@
-import EarcuffLeafImageGrid from "@/components/image/EarcuffLeafImageGrid";
+import EarcuffLeafImageGrid from "@/components/image/product/EarcuffLeafImageGrid";
 import Button from "@/components/ui/Button";
 
 const EarcuffLeafArea = () => {
