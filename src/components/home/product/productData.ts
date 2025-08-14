@@ -131,6 +131,15 @@ export const bangleItems = [
     url: 'https://www.creema.jp/item/19149891/detail',
     mUrl: 'https://minne.com/items/42451566',
   },
+  {
+    id: 3,
+    enName: "SYCAMORE",
+    jpName: "シカモア",
+    description: "シカモアは、淡くやわらかな色合いと繊細な杢目が美しい木材です。あの名高い名器「ストラディバリウス」でも使用され、どこか上品で優しく、空間に静かな明るさを添えてくれます。",
+    image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/64d82a9cb7774f2d9969acc7bb58bfa3/20250720002439790.jpeg",
+    url: 'https://www.creema.jp/item/19681285/detail',
+    mUrl: 'https://minne.com/items/43284075',
+  },
 ];
 export const earcuffItems = [
   {

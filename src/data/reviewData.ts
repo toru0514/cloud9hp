@@ -17,7 +17,7 @@ export const reviewData = [
     rating: 5,
   },
   {
-    platform: "Creema", // Creema、minne、BASEなど
+    platform: "Creema",
     comment: "とても素敵なお品で大満足しています。\n" +
       "梱包も丁寧にしていただき、ありがとうございました。\n" +
       "夫婦でペアで購入しましたが色合いが少しずつ違ってそれもまた素敵です。\n" +
