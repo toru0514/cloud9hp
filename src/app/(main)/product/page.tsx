@@ -1,5 +1,6 @@
-// src/app/product/page.tsx
+"use client";
 
+import React, {useState} from "react";
 import {
   bangleItems,
   crystalwoodringItems,
@@ -8,43 +9,76 @@ import {
   woodringItems,
 } from "@/components/home/product/productData";
 import {ProductCard} from "@/components/home/product/ProductCard";
-import React from "react";
 
 const productSections = [
-  {
-    id: undefined,
-    title: "- WOOD RING -",
-    items: woodringItems,
-  },
-  {
-    id: "crystalwoodring",
-    title: "- CRYSTAL & WOOD RING -",
-    items: crystalwoodringItems,
-  },
-  {
-    id: "bangle",
-    title: "- WOOD BANGLE -",
-    items: bangleItems,
-  },
-  {
-    id: "earcuff",
-    title: "- WOOD EARCUFF -",
-    items: earcuffItems,
-  },
-  {
-    id: "earcuffleaf",
-    title: "- WOOD EARCUFF LEAF -",
-    items: earcuffleafItems,
-  },
+  {id: undefined, title: "- WOOD RING -", items: woodringItems},
+  {id: "crystalwoodring", title: "- CRYSTAL & WOOD RING -", items: crystalwoodringItems},
+  {id: "bangle", title: "- WOOD BANGLE -", items: bangleItems},
+  {id: "earcuff", title: "- WOOD EARCUFF -", items: earcuffItems},
+  {id: "earcuffleaf", title: "- WOOD EARCUFF LEAF -", items: earcuffleafItems},
 ];
 
 const bgColors = ["bg-white", "bg-neutral-100"];
 
-const ProductSection = ({id, title, items, index}: {
+type LightboxImage = { src: string; alt?: string } | null;
+
+function Lightbox({
+                    image,
+                    onClose,
+                  }: {
+  image: { src: string; alt?: string };
+  onClose: () => void;
+}) {
+  // ESCで閉じる & 背景スクロール固定
+  React.useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-describedby="lightbox-help"
+      className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 p-4"
+      onClick={onClose}
+    >
+      <p id="lightbox-help" className="sr-only">
+        画像または背景をクリック、あるいはEscキーで閉じます。
+      </p>
+
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={image.src}
+        alt={image.alt ?? ""}
+        onClick={(e) => {
+          e.stopPropagation();
+          onClose();
+        }}
+        className="max-h-[90vh] max-w-[90vw] object-contain rounded-xl shadow-2xl cursor-zoom-out"
+      />
+    </div>
+  );
+}
+
+const ProductSection = ({
+                          id,
+                          title,
+                          items,
+                          index,
+                          onImageClick,
+                        }: {
   id?: string;
   title: string;
   items: typeof woodringItems;
-  index: number
+  index: number;
+  onImageClick: (src: string, alt?: string) => void;
 }) => (
   <div id={id} className={`px-4 py-12 ${bgColors[index % bgColors.length]}`}>
     <div className="max-w-screen-xl mx-auto">
@@ -59,6 +93,7 @@ const ProductSection = ({id, title, items, index}: {
             image={item.image}
             url={item.url}
             murl={item.mUrl}
+            onImageClick={(src, alt) => onImageClick(src, alt)}
           />
         ))}
       </div>
@@ -66,17 +101,27 @@ const ProductSection = ({id, title, items, index}: {
   </div>
 );
 
-const ProductPage = () => {
+export default function ProductPage() {
+  const [lightboxImage, setLightboxImage] = useState<LightboxImage>(null);
+
   return (
     <>
       <div className="px-4 py-12 max-w-screen-xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">PRODUCTS</h1>
       </div>
+
       {productSections.map((section, index) => (
-        <ProductSection key={section.title} index={index} {...section} />
+        <ProductSection
+          key={section.title}
+          index={index}
+          onImageClick={(src, alt) => setLightboxImage({src, alt})}
+          {...section}
+        />
       ))}
+
+      {lightboxImage && (
+        <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)}/>
+      )}
     </>
   );
-};
-
-export default ProductPage;
+}
