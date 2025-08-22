@@ -6,7 +6,7 @@ import {
   crystalwoodringItems,
   earcuffItems,
   earcuffleafItems,
-  woodringItems,
+  woodringItems, woodtiepinItems,
 } from "@/components/home/product/productData";
 import {ProductCard} from "@/components/home/product/ProductCard";
 
@@ -16,6 +16,7 @@ const productSections = [
   {id: "bangle", title: "- WOOD BANGLE -", items: bangleItems},
   {id: "earcuff", title: "- WOOD EARCUFF -", items: earcuffItems},
   {id: "earcuffleaf", title: "- WOOD EARCUFF LEAF -", items: earcuffleafItems},
+  {id: "tiepin", title: "- WOOD TIE PIN -", items: woodtiepinItems},
 ];
 
 const bgColors = ["bg-white", "bg-neutral-100"];

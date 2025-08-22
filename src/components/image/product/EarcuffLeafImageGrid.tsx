@@ -1,10 +1,10 @@
 "use client";
 
-import {WoodringImageData} from "@/data/imageData";
+import {EarcuffLeafImageData} from "@/data/imageData";
 import ImageGridWithLightbox from "@/components/image/ImageGridCommon";
 
 const WoodringImageGrid = () => {
-  return <ImageGridWithLightbox images={WoodringImageData}/>;
+  return <ImageGridWithLightbox images={EarcuffLeafImageData}/>;
 };
 
 export default WoodringImageGrid;

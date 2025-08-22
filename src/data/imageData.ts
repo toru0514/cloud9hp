@@ -91,6 +91,29 @@ export const EarcuffLeafImageData = [
   },
 
 ];
+export const WoodTiePinImageData = [
+  {
+    url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/d19b307c3cbf41e7876819412f28dadc/2025-07-20_00-32-49_720.jpeg",
+    alt: "tiepin 1",
+    link: "/product#tiepin"
+  },
+  {
+    url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/7700dc9037a947b28741e31b02251e65/IMG_5335.JPG",
+    alt: "tiepin 2",
+    link: "/product#tiepin"
+  },
+  {
+    url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/329289ca667247f8ac3c8c73b0c07b9e/2025-08-09_15-11-22_870.jpeg",
+    alt: "tiepin 3",
+    link: "/product#tiepin"
+  },
+  {
+    url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/e4a6bd7bed794066a4bc856632e6e928/2025-08-09_14-59-38_370.jpeg",
+    alt: "tiepin 4",
+    link: "/product#tiepin"
+  },
+
+];
 export const GalleryImageData = [
   {
     url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/f69f8b76f44e462fae8c0bd211f96e44/image1.jpeg",
