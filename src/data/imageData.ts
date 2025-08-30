@@ -112,8 +112,25 @@ export const WoodTiePinImageData = [
     alt: "tiepin 4",
     link: "/product#tiepin"
   },
-
 ];
+export const WoodEarringImageData = [
+  {
+    url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/a6d469e69105434ba123f9f4938d8f84/IMG_5406.JPG",
+    alt: "earring 1",
+    link: "/product#earring"
+  },
+  {
+    url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/592fda04acea4685b977fb6a716d2117/2025-05-16_21-11-01_480.jpeg",
+    alt: "earring 2",
+    link: "/product#earring"
+  },
+  {
+    url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/df483d0f69ac4484a3f4f3b59b9da8df/2025-06-07_11-43-36_910.jpeg",
+    alt: "earring 3",
+    link: "/product#earring"
+  },
+];
+
 export const GalleryImageData = [
   {
     url: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/f69f8b76f44e462fae8c0bd211f96e44/image1.jpeg",

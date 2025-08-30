@@ -6,6 +6,7 @@ import EarcuffLeafArea from "@/components/home/product/EarcuffLeaf/EarcuffLeaf";
 import SectionContainer from "@/components/ui/SectionContainer";
 import SectionTitle from "@/components/ui/SectionTitle";
 import WOODTiePinArea from "@/components/home/product/WoodTiePin/WoodTiePin";
+import WoodEarringArea from "@/components/home/product/WoodEarring/WoodEaring";
 
 const ProductArea = () => {
   return (
@@ -16,6 +17,7 @@ const ProductArea = () => {
       <BangleArea/>
       <EarcuffArea/>
       <EarcuffLeafArea/>
+      <WoodEarringArea/>
       <WOODTiePinArea/>
     </SectionContainer>
   );
