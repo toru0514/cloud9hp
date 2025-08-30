@@ -186,7 +186,7 @@ export const earringItems = [
     id: 1,
     enName: "PINK IVORY",
     jpName: "ピンクアイボリー",
-    description: "鮮やかで可憐なピンク色が耳元を彩るピアス。「木の女王」と称される気品ある木材で、揺れるたびに華やかさと優美さを添えてくれます。",
+    description: "鮮やかで可憐なピンク色が耳元を彩るピアス。「木の女王」と称される気品ある木材で、揺れるたびに華やかさと優美さを添え、装う人の印象をより華やかに引き立てます。",
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/9ae922d3cc944dbbbdfec14172214042/2025-08-24_18-51-49_810.jpeg",
     url: 'https://www.creema.jp/item/19758506/detail',
     mUrl: 'https://minne.com/items/43778408',
