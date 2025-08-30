@@ -222,7 +222,7 @@ export const earringItems = [
     id: 5,
     enName: "KARIN & CIRCLE",
     jpName: "カリン & サークル",
-    description: "人気のウッドリングを、耳元を飾るピアスとして丁寧に仕立てました。赤みのある深い色合いと、自然な艶を持つカリン材でつくった、まあるいフォルム。木がもつあたたかみをそのまま活かしたシンプルなデザインが、日々の装いにそっと寄り添います。",
+    description: "人気のウッドリングを、耳元を飾るピアスとして丁寧に仕立てました。赤みのある深い色合いで、木のあたたかみをそのまま活かしたシンプルなデザインが、日々の装いにそっと寄り添います。",
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/df483d0f69ac4484a3f4f3b59b9da8df/2025-06-07_11-43-36_910.jpeg",
     url: 'https://www.creema.jp/item/19425477/detail',
     mUrl: 'https://minne.com/items/43679058',
