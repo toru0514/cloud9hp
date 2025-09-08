@@ -14,7 +14,7 @@ const SnsLinks = () => {
       <div className="grid grid-cols-5 sm:gap-6 max-w-5xl mx-auto sm:px-4 mt-5 bg-amber-20">
         {snsLinks.map((sns, i) => {
           const src = isMobile
-            ? sns.icon.replace(".", "_sp.") // 例：creema.jpg → creema-sp.jpg に変換
+            ? sns.icon.replace(".", "_sp.")
             : sns.icon;
 
           return (
