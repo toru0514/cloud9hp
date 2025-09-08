@@ -31,4 +31,16 @@ export const snsLinks = [
     icon: "/icons/x.png",
     message: "Xで制作の裏側を発信中",
   },
+  {
+    name: "tiktok",
+    url: "https://www.tiktok.com/@cloud9_woodwork",
+    icon: "/icons/tiktok.png",
+    message: "動画公開中",
+  },
+  {
+    name: "Youtube",
+    url: "https://www.youtube.com/@cloud9woodwork",
+    icon: "/icons/youtube.png",
+    message: "動画公開中",
+  },
 ];
