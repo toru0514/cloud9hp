@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import SnsLinks from "@/components/home/SnsLinks";
 import ReviewArea from "@/components/home/Review";
 import OnlineShopArea from "@/components/home/OnlineShop";
+import WoodsIntroArea from "@/components/home/Woods";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <GalleryArea/>
         {/*<VoiceArea />*/}
         <AboutUsArea/>
+        <WoodsIntroArea/>
         <ReviewArea/>
         <SnsLinks/>
       </main>
