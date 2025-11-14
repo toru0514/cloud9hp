@@ -3,11 +3,19 @@
 import SectionTitle from "@/components/ui/SectionTitle";
 import SectionContainer from "@/components/ui/SectionContainer";
 import {shopLinks} from "@/data/shopLinks";
+import {Locale, defaultLocale} from "@/lib/i18n";
+import {getHomeDictionary} from "@/locales/home";
 
-const OnlineShopArea = () => {
+type OnlineShopAreaProps = {
+  locale?: Locale;
+};
+
+const OnlineShopArea = ({locale = defaultLocale}: OnlineShopAreaProps) => {
+  const dictionary = getHomeDictionary(locale).onlineShop;
+
   return (
     <SectionContainer className="block md:hidden bg-neutral-200">
-      <SectionTitle>ONLINE SHOP</SectionTitle>
+      <SectionTitle>{dictionary.title}</SectionTitle>
       <div className="grid grid-cols-3 gap-6 max-w-md mx-auto mt-5">
         {shopLinks.map((shop, i) => (
           <a

@@ -5,11 +5,18 @@ import HamburgerMenu from "@/components/layout/HamburgerMenu";
 import Image from "next/image";
 import {useEffect, useState} from "react";
 import {HeaderImageData} from "@/data/imageData";
+import {Locale, defaultLocale} from "@/lib/i18n";
+import {getHomeDictionary} from "@/locales/home";
 
-const Header = () => {
+type HeaderProps = {
+  locale?: Locale;
+};
+
+const Header = ({locale = defaultLocale}: HeaderProps) => {
   const headerImg = HeaderImageData[0];
   const [isZoomed, setIsZoomed] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const heroCopy = getHomeDictionary(locale).header;
 
   useEffect(() => {
     setTimeout(() => setIsZoomed(true), 100); // ページが読み込まれて 0.1秒後にズーム開始
@@ -45,27 +52,24 @@ const Header = () => {
           isVisible ? "translate-x-0 opacity-100" : "translate-x-[100%] opacity-0"
         }`}
       >
-        <p className="text-lg sm:text-[24px] md:text-2xl lg:text-4xl font-[650] md:leading-8 lg:leading-12">
-          木のぬくもりと、<br/>最高の幸せをあなたに。
+        <p className="text-lg sm:text-[24px] md:text-2xl lg:text-4xl font-[650] md:leading-8 lg:leading-12 whitespace-pre-line">
+          {heroCopy.heroHeading}
         </p>
         <p
           className="text-sm sm:text-base md:text-xl lg:text-2xl font-[500] sm:mt-[5px] md:mt-1.5 leading-tight sm:leading-relaxed">
-                    <span className="block md:inline">
-                        身につけるだけで温もりが感じられて、
-                        <br className="block md:hidden"/>
-                        あたたかい気持ちになれる
-                    </span>
-          <br className="hidden md:block"/>
-          <span className="block md:inline">
-                        あなたの日常に寄り添う、ウッドアクセサリー
-                    </span>
+          {heroCopy.heroDescription.map((line, index) => (
+            <span key={`${line}-${index}`} className="block md:inline">
+              {line}
+              {index === 0 && <br className="hidden md:block"/>}
+            </span>
+          ))}
         </p>
       </div>
 
       <nav className="hidden md:flex absolute top-4 right-4 space-x-6">
-        <SideMenu/>
+        <SideMenu locale={locale}/>
       </nav>
-      <HamburgerMenu/>
+      <HamburgerMenu locale={locale}/>
     </div>
   );
 };

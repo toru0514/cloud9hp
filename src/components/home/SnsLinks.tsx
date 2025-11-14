@@ -4,13 +4,20 @@ import {snsLinks} from "@/data/snsLinks";
 import SectionTitle from "@/components/ui/SectionTitle";
 import SectionContainer from "@/components/ui/SectionContainer";
 import {useMediaQuery} from "@/hooks/useMediaQuery";
+import {Locale, defaultLocale} from "@/lib/i18n";
+import {getHomeDictionary} from "@/locales/home";
 
-const SnsLinks = () => {
+type SnsLinksProps = {
+  locale?: Locale;
+};
+
+const SnsLinks = ({locale = defaultLocale}: SnsLinksProps) => {
   const isMobile = useMediaQuery("(max-width: 640px)");
+  const dictionary = getHomeDictionary(locale).sns;
 
   return (
     <SectionContainer className="bg-neutral-200">
-      <SectionTitle>OFFICIAL LINKS</SectionTitle>
+      <SectionTitle>{dictionary.title}</SectionTitle>
       <div className="grid grid-cols-4 sm:grid-cols-5 sm:gap-6 max-w-5xl mx-auto sm:px-4 gap-y-5 mt-5 bg-amber-20">
         {snsLinks.map((sns, i) => {
           const src = isMobile

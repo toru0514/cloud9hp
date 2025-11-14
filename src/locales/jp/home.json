@@ -1,0 +1,47 @@
+{
+  "header": {
+    "heroHeading": "木のぬくもりと、\n最高の幸せをあなたに。",
+    "heroDescription": [
+      "身につけるだけで温もりが感じられて、あたたかい気持ちになれる",
+      "あなたの日常に寄り添う、ウッドアクセサリー"
+    ]
+  },
+  "onlineShop": {
+    "title": "ONLINE SHOP"
+  },
+  "gallery": {
+    "title": "GALLERY",
+    "buttonLabel": "VIEW MORE"
+  },
+  "about": {
+    "title": "ABOUT US",
+    "tagline": "-『cloud9(クラウドナイン)』とは -",
+    "description": "「I am on cloud9!!」という風に使われ、\n「意気揚々」「最高の幸せ」「至福」\nという意味があります。\n\n我々が提供する商品で、\n「cloud9な気持ちになっていただきたい」\nという想いを込めたブランドです。\n\n木材を使用した指輪や、イヤーカフ、\nバングル等のアクセサリーを制作/販売を行なっています。\nどの商品も、最高の幸せを感じていただけるよう、\n1点1点大切に作り上げています。\n\nアクセサリー以外にも、木を使用したパネルや額縁等の依頼や相談も受け付けております。\nお気軽にご相談ください。",
+    "buttonLabel": "VIEW MORE"
+  },
+  "woods": {
+    "title": "WOOD MATERIALS",
+    "headline": "「木の個性 – 写真と解説で魅力に触れる」",
+    "description": "メープル、パドック、パープルハート…。\n木材工房cloud9で扱う代表的な木材を、カード形式で分かりやすく紹介します。\n詳しく知りたい木材をクリックして詳細ページへ。",
+    "buttonLabel": "VIEW MORE",
+    "featuredCatch": {
+      "maple": "— 清潔感と優しさを併せ持つ、やさしい木材 —",
+      "padauk": "— 深紅にきらめく、情熱の木 —",
+      "purpleheart": "— 深く、美しく、変化する紫の木 —",
+      "sycamore": "— 静かな輝きを放つ、気品ある白木 —",
+      "wenge": "— 漆黒と灰の織りなす、静謐な存在感 —",
+      "ziricote": "— 木が描くアート。幻想的な模様を纏う響きの名材 —"
+    }
+  },
+  "reviews": {
+    "title": "CUSTOMER REVIEWS",
+    "platformLabelPrefix": "",
+    "platformLabelSuffix": "より"
+  },
+  "sns": {
+    "title": "OFFICIAL LINKS"
+  },
+  "footer": {
+    "copyrightText": "木材工房cloud9 All rights reserved."
+  }
+}

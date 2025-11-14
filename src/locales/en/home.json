@@ -1,0 +1,47 @@
+{
+  "header": {
+    "heroHeading": "Bring the warmth of wood and moments of bliss to you.",
+    "heroDescription": [
+      "Slip on a piece and feel its gentle comfort.",
+      "Handcrafted wooden accessories for everyday life."
+    ]
+  },
+  "onlineShop": {
+    "title": "ONLINE SHOP"
+  },
+  "gallery": {
+    "title": "GALLERY",
+    "buttonLabel": "VIEW GALLERY"
+  },
+  "about": {
+    "title": "ABOUT US",
+    "tagline": "- What “cloud9” means -",
+    "description": "People say “I am on cloud nine!!” when they feel ecstatic or blissful.\nWe created this brand so our pieces can bring that same feeling of cloud nine to you.\n\nWe craft and sell wooden rings, ear cuffs, bangles, and other accessories.\nEach piece is lovingly handmade so it can deliver moments of pure joy.\n\nWe also take commissions for wooden panels, frames, and custom items.\nPlease feel free to reach out.",
+    "buttonLabel": "READ MORE ABOUT US"
+  },
+  "woods": {
+    "title": "WOOD MATERIALS",
+    "headline": "“The character of wood – explore its charm through photos and stories”",
+    "description": "Maple, padauk, purpleheart…\nDiscover the signature woods we use at cloud9 woodwork through easy-to-browse cards.\nTap any wood to jump to its detail page.",
+    "buttonLabel": "SEE ALL WOODS",
+    "featuredCatch": {
+      "maple": "— A gentle wood that balances clarity and warmth —",
+      "padauk": "— A blazing crimson wood full of passion —",
+      "purpleheart": "— Deep, beautiful purple that changes over time —",
+      "sycamore": "— Refined white wood with a quiet glow —",
+      "wenge": "— Dramatic dark wood woven with charcoal stripes —",
+      "ziricote": "— Natural artwork with otherworldly patterns —"
+    }
+  },
+  "reviews": {
+    "title": "CUSTOMER REVIEWS",
+    "platformLabelPrefix": "from ",
+    "platformLabelSuffix": ""
+  },
+  "sns": {
+    "title": "OFFICIAL LINKS"
+  },
+  "footer": {
+    "copyrightText": "Cloud9 Woodwork. All rights reserved."
+  }
+}

@@ -1,14 +1,7 @@
-// app/components/FeatureSlide.tsx
-
 import Image from "next/image";
+import {FeatureContent} from "@/data/featureData";
 
-type Feature = {
-  image: string;
-  title: string;
-  description: string;
-};
-
-export const FeatureSlide = ({feature}: { feature: Feature }) => (
+export const FeatureSlide = ({feature}: { feature: FeatureContent }) => (
   <div className="flex flex-col md:flex-row items-center gap-6">
     <div className="w-full md:w-1/2 pl-10">
       <Image

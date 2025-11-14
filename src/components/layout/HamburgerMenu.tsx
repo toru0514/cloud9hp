@@ -3,8 +3,13 @@
 import {useState} from "react";
 import {HiOutlineMenu, HiOutlineX} from "react-icons/hi";
 import SideMenu from "@/components/layout/SideMenu";
+import {Locale, defaultLocale} from "@/lib/i18n";
 
-const HamburgerMenu = () => {
+type HamburgerMenuProps = {
+  locale?: Locale;
+};
+
+const HamburgerMenu = ({locale = defaultLocale}: HamburgerMenuProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -32,7 +37,7 @@ const HamburgerMenu = () => {
             className="flex flex-col space-y-4 w-fit"
             onClick={(e) => e.stopPropagation()}
           >
-            <SideMenu isMobile={true}/>
+            <SideMenu isMobile={true} locale={locale}/>
           </nav>
         </div>
       )}

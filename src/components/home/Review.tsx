@@ -1,6 +1,5 @@
 "use client";
 
-import {reviewData} from "@/data/reviewData";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination, Navigation, Autoplay} from "swiper/modules";
 import "swiper/css";
@@ -8,11 +7,21 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import SectionTitle from "@/components/ui/SectionTitle";
 import SectionContainer from "@/components/ui/SectionContainer";
+import {getReviewData} from "@/data/reviewData";
+import {Locale, defaultLocale} from "@/lib/i18n";
+import {getHomeDictionary} from "@/locales/home";
 
-const ReviewArea = () => {
+type ReviewAreaProps = {
+  locale?: Locale;
+};
+
+const ReviewArea = ({locale = defaultLocale}: ReviewAreaProps) => {
+  const reviews = getReviewData(locale);
+  const dictionary = getHomeDictionary(locale).reviews;
+
   return (
     <SectionContainer>
-      <SectionTitle className="pb-4">CUSTOMER REVIEWS</SectionTitle>
+      <SectionTitle className="pb-4">{dictionary.title}</SectionTitle>
       <Swiper
         modules={[Pagination, Navigation, Autoplay]}
         spaceBetween={20}
@@ -31,7 +40,7 @@ const ReviewArea = () => {
         loop
         className="max-w-6xl mx-auto"
       >
-        {reviewData.map((review, index) => (
+        {reviews.map((review, index) => (
           <SwiperSlide key={index}>
             <div
               className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-between text-center h-full min-h-[400px]">
@@ -40,7 +49,11 @@ const ReviewArea = () => {
                 {"☆".repeat(5 - review.rating)}
               </div>
               <p className="text-gray-700 text-sm sm:text-base mt-4">{review.comment}</p>
-              <div className="text-sm text-gray-500">{review.platform}より</div>
+              <div className="text-sm text-gray-500">
+                {dictionary.platformLabelPrefix}
+                {review.platform}
+                {dictionary.platformLabelSuffix}
+              </div>
             </div>
           </SwiperSlide>
 

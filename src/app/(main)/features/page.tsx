@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import {featureData} from "@/data/featureData";
+import {getFeatureData} from "@/data/featureData";
+import {defaultLocale} from "@/lib/i18n";
 
 const bgColors = [
   "bg-white",
@@ -12,6 +13,7 @@ const bgColors = [
 ];
 
 const FeaturesPage = () => {
+  const featureData = getFeatureData(defaultLocale);
   return (
     <div className="text-gray-800">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center py-12">FEATURES</h1>
