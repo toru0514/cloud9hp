@@ -31,8 +31,11 @@ export default function WoodsIntroArea({locale = defaultLocale}: WoodsIntroAreaP
   const formatAlt = (woodNamePrimary: string, woodNameSecondary: string) =>
     `${woodNamePrimary} (${woodNameSecondary})`;
 
-  const getCatchCopy = (slug: (typeof FEATURED_SLUGS)[number], fallback: string) =>
-    (dictionary.featuredCatch[slug] ?? fallback).replace(/^—\s*|\s*—$/g, "");
+  const getCatchCopy = (slug: string, fallback: string) =>
+    ((dictionary.featuredCatch as Record<string, string>)[slug] ?? fallback).replace(
+      /^—\s*|\s*—$/g,
+      "",
+    );
 
   return (
     <SectionContainer className="bg-neutral-100">
