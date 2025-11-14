@@ -1,6 +1,5 @@
 import ProductPageContent from "@/components/pages/ProductPageContent";
 
 export default function ProductEnPage() {
-  return <ProductPageContent/>;
+  return <ProductPageContent locale="en"/>;
 }
-

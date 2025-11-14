@@ -11,6 +11,7 @@ import {
   woodtiepinItems,
 } from "@/components/home/product/productData";
 import {ProductCard} from "@/components/home/product/ProductCard";
+import {Locale, defaultLocale} from "@/lib/i18n";
 
 const productSections = [
   {id: undefined, title: "- WOOD RING -", items: woodringItems},
@@ -70,41 +71,64 @@ function Lightbox({
   );
 }
 
+type ProductItem = {
+  id: number;
+  enName: string;
+  jpName: string;
+  description: string;
+  descriptionEn?: string;
+  image: string;
+  url: string;
+  mUrl: string;
+};
+
+type ProductSectionProps = {
+  id?: string;
+  title: string;
+  items: ProductItem[];
+  index: number;
+  locale: Locale;
+  onImageClick: (src: string, alt?: string) => void;
+};
+
 const ProductSection = ({
                           id,
                           title,
                           items,
                           index,
+                          locale,
                           onImageClick,
-                        }: {
-  id?: string;
-  title: string;
-  items: typeof woodringItems;
-  index: number;
-  onImageClick: (src: string, alt?: string) => void;
-}) => (
+                        }: ProductSectionProps) => (
   <div id={id} className={`px-4 py-12 ${bgColors[index % bgColors.length]}`}>
     <div className="max-w-screen-xl mx-auto">
       <h2 className="pb-2 text-2xl font-semibold text-center">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((item) => (
-          <ProductCard
-            key={item.id}
-            enName={item.enName}
-            jpName={item.jpName}
-            description={item.description}
-            image={item.image}
-            url={item.url}
-            murl={item.mUrl}
-            onImageClick={(src, alt) => onImageClick(src, alt)}
-          />
+            <ProductCard
+              key={item.id}
+              enName={item.enName}
+              jpName={item.jpName}
+              description={
+                locale === "en" && "descriptionEn" in item && item.descriptionEn
+                  ? item.descriptionEn
+                  : item.description
+              }
+              image={item.image}
+              url={item.url}
+              murl={item.mUrl}
+              onImageClick={(src, alt) => onImageClick(src, alt)}
+            />
         ))}
       </div>
     </div>
   </div>
 );
 
-const ProductPageContent = () => {
+type ProductPageContentProps = {
+  locale?: Locale;
+};
+
+const ProductPageContent = ({locale = defaultLocale}: ProductPageContentProps) => {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage>(null);
 
   return (
@@ -117,6 +141,7 @@ const ProductPageContent = () => {
         <ProductSection
           key={section.title}
           index={index}
+          locale={locale}
           onImageClick={(src, alt) => setLightboxImage({src, alt})}
           {...section}
         />
@@ -130,4 +155,3 @@ const ProductPageContent = () => {
 };
 
 export default ProductPageContent;
-
