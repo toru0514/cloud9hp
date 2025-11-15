@@ -290,15 +290,45 @@ export const woods: Wood[] = [
       "蛇の鱗を思わせる独特の模様。圧倒的な存在感と重厚な質感で希少木材の中でも際立つ存在です。",
       "世界でも特に重厚な木材のひとつとして知られ、手に伝わる“詰まり”が特徴。"
     ],
+    leadEn: [
+      "Snakewood is instantly recognizable for its pattern reminiscent of snake scales. Among rare woods, it stands out with overwhelming presence and heavy, powerful character.",
+      "It is known as one of the densest and heaviest woods in the world, with a distinctive “solid” feel in the hand.",
+    ],
     features: [
       {label: "色合い", text: "赤褐色〜ダークブラウンを基調に、黒や焦げ茶の蛇柄のような斑紋。"},
       {label: "杢目（もくめ）", text: "まだら状・網目状の“蛇柄”が一本一本異なる。装飾価値がとても高い。"},
       {label: "重さと密度", text: "非常に硬質かつ重厚。乾燥も難しいが強靭で高い耐久性。"}
     ],
+    featuresEn: [
+      {
+        label: "Color",
+        text: "Reddish brown to dark brown base, overlaid with black or very dark markings that resemble snakeskin.",
+      },
+      {
+        label: "Grain pattern",
+        text: "Each piece shows a unique mottled or net‑like pattern, giving it exceptionally high decorative value.",
+      },
+      {
+        label: "Density & strength",
+        text: "Extremely dense and heavy, difficult to dry but remarkably strong and durable once stabilized.",
+      },
+    ],
     uses: ["ナイフや万年筆のグリップ", "アクセサリー", "チェス駒", "装飾小物", "楽器パーツ"],
+    usesEn: [
+      "Knife handles",
+      "Fountain pen bodies",
+      "Accessories",
+      "Chess pieces",
+      "Decorative small objects",
+      "Instrument parts",
+    ],
     body: [
       "自然が生んだ芸術品。視覚・触覚の両面で圧倒的な印象を残す唯一無二の素材。"
-    ]
+    ],
+    bodyEn: [
+      "A true work of art created by nature, snakewood leaves a powerful impression both visually and to the touch.",
+      "Because no two patterns are alike, each piece feels like a one‑of‑a‑kind treasure.",
+    ],
   },
   {
     slug: "pink-ivory",
