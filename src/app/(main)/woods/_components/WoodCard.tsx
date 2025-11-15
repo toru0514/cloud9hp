@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {useState} from "react";
 import type {Wood} from "../_data/woods";
+import {Locale, defaultLocale} from "@/lib/i18n";
 
 function FallbackThumb({title}: { title: string }) {
   return (
@@ -14,24 +15,35 @@ function FallbackThumb({title}: { title: string }) {
   );
 }
 
-export function WoodCard({wood}: { wood: Wood }) {
+type WoodCardProps = {
+  wood: Wood;
+  locale?: Locale;
+};
+
+export function WoodCard({wood, locale = defaultLocale}: WoodCardProps) {
   const [imgError, setImgError] = useState(false);
   const imgSrc = `/woods/${wood.slug}.jpg`;
+
+  const primaryName = locale === "en" ? wood.nameEn : wood.nameJa;
+  const secondaryName = locale === "en" ? wood.nameJa : wood.nameEn;
+  const alt = `${primaryName} (${secondaryName})`;
+  const ariaLabel =
+    locale === "en" ? `View details for ${primaryName}` : `${wood.nameJa}の詳細を見る`;
 
   return (
     <Link
       href={`/woods/${wood.slug}`}
       className="group block overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md"
-      aria-label={`${wood.nameJa}の詳細を見る`}
+      aria-label={ariaLabel}
     >
       <div className="relative">
         <div className="relative h-40 w-full">
           {imgError ? (
-            <FallbackThumb title={wood.nameJa}/>
+            <FallbackThumb title={primaryName}/>
           ) : (
             <Image
               src={imgSrc}
-              alt={`${wood.nameJa} (${wood.nameEn})`}
+              alt={alt}
               fill
               sizes="(min-width: 1280px) 400px, (min-width: 768px) 300px, 100vw"
               className="object-cover"
@@ -42,9 +54,9 @@ export function WoodCard({wood}: { wood: Wood }) {
 
         <div className="p-3">
           <h3 className="text-base sm:text-lg font-bold">
-            {wood.nameJa}
+            {primaryName}
             <span className="ml-1 text-sm text-neutral-500 font-medium">
-              / {wood.nameEn}
+              / {secondaryName}
             </span>
           </h3>
           <p className="mt-1 line-clamp-2 text-sm sm:text-base text-neutral-600">
