@@ -13,11 +13,16 @@ export type Wood = {
   nameEn: string;              // 例: "Maple"
   catch: string;               // 見出しコピー（日本語）
   catchEn?: string;            // 見出しコピー（英語・任意）
-  lead: string[];              // 冒頭の紹介（段落）
-  features: WoodFeature[];     // 主な特徴
-  uses: string[];              // 主な用途
-  body?: string[];             // 追記・締めの段落
-  notes?: string[];            // 補足・注意書き
+  lead: string[];              // 冒頭の紹介（段落・日本語）
+  leadEn?: string[];           // 冒頭の紹介（英語・任意）
+  features: WoodFeature[];     // 主な特徴（日本語）
+  featuresEn?: WoodFeature[];  // 主な特徴（英語・任意）
+  uses: string[];              // 主な用途（日本語）
+  usesEn?: string[];           // 主な用途（英語・任意）
+  body?: string[];             // 追記・締めの段落（日本語）
+  bodyEn?: string[];           // 追記・締めの段落（英語・任意）
+  notes?: string[];            // 補足・注意書き（日本語）
+  notesEn?: string[];          // 補足・注意書き（英語・任意）
 };
 
 export const woods: Wood[] = [
@@ -31,6 +36,7 @@ export const woods: Wood[] = [
       "「カエデ」といえば聞いたことがあるのではないでしょうか？メープルシロップ、野球のバット、ギターなど、私たちの生活の中でも馴染み深い存在です。",
       "古くから人々の暮らしに寄り添ってきたメープルは、その明るく滑らかな質感で、今もなお多くの人々に選ばれています。"
     ],
+    leadEn: ["aaa", "aaa"],
     features: [
       {
         label: "色合い",
@@ -42,11 +48,18 @@ export const woods: Wood[] = [
       },
       {label: "硬さと耐久性", text: "広葉樹の中でも比較的硬質で、反りや割れに強く長く使うアイテムに最適です。"}
     ],
+    featuresEn: [
+      {label: "aaa", text: "aaa"},
+      {label: "aaa", text: "aaa"},
+      {label: "aaa", text: "aaa"},
+    ],
     uses: ["家具", "床材", "キッチン用品", "野球バット", "ギター", "バイオリン"],
     body: [
       "やさしく上品な色味、自然が生んだ美しい杢目。ナチュラルな空間にも、洗練された空間にも馴染みます。",
       "落ち着きの中に個性が光る、使うほどに愛着が湧く木材です。"
-    ]
+    ],
+    usesEn: ["aaa", "aaa"],
+    bodyEn: ["aaa", "aaa"],
   },
   {
     slug: "padauk",

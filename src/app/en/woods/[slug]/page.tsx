@@ -21,6 +21,5 @@ export function generateMetadata({params}: { params: { slug: string } }): Metada
 export default function WoodDetailEnPage({params}: { params: { slug: string } }) {
   const wood = woods.find((w) => w.slug === params.slug);
   if (!wood) return notFound();
-  return <WoodDetail wood={wood}/>;
+  return <WoodDetail wood={wood} locale="en"/>;
 }
-

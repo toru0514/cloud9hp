@@ -1,22 +1,41 @@
 // app/woods/_components/WoodDetail.tsx
 import Image from "next/image";
 import type {Wood} from "../_data/woods";
+import {Locale, defaultLocale} from "@/lib/i18n";
 
-export function WoodDetail({wood}: { wood: Wood }) {
+type WoodDetailProps = {
+  wood: Wood;
+  locale?: Locale;
+};
+
+export function WoodDetail({wood, locale = defaultLocale}: WoodDetailProps) {
   const imgSrc = `/woods/${wood.slug}.jpg`;
+
+  const primaryName = locale === "en" ? wood.nameEn : wood.nameJa;
+  const secondaryName = locale === "en" ? wood.nameJa : wood.nameEn;
+  const catchText =
+    locale === "en" && wood.catchEn ? wood.catchEn : wood.catch;
+  const lead = locale === "en" && wood.leadEn ? wood.leadEn : wood.lead;
+  const features =
+    locale === "en" && wood.featuresEn ? wood.featuresEn : wood.features;
+  const uses = locale === "en" && wood.usesEn ? wood.usesEn : wood.uses;
+  const body = locale === "en" && wood.bodyEn ? wood.bodyEn : wood.body;
+  const notes = locale === "en" && wood.notesEn ? wood.notesEn : wood.notes;
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-8">
       <header className="mb-6">
-        <h1 className="text-2xl font-bold">{wood.nameJa} <span
-          className="text-base text-neutral-500">/ {wood.nameEn}</span></h1>
-        <p className="mt-2 text-neutral-700">{wood.catch}</p>
+        <h1 className="text-2xl font-bold">
+          {primaryName}{" "}
+          <span className="text-base text-neutral-500">/ {secondaryName}</span>
+        </h1>
+        <p className="mt-2 text-neutral-700">{catchText}</p>
       </header>
 
       <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-lg bg-neutral-100">
         <Image
           src={imgSrc}
-          alt={`${wood.nameJa} (${wood.nameEn})`}
+          alt={`${primaryName} (${secondaryName})`}
           fill
           sizes="100vw"
           className="object-cover"
@@ -24,17 +43,22 @@ export function WoodDetail({wood}: { wood: Wood }) {
       </div>
 
       <section className="prose prose-neutral max-w-none ">
-        {wood.lead.map((p, i) => (
+        {lead.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
       </section>
 
-      {!!wood.features?.length && (
+      {!!features?.length && (
         <section className="mt-8">
-          <h2 className="mb-3 text-xl font-semibold">主な特徴</h2>
+          <h2 className="mb-3 text-xl font-semibold">
+            {locale === "en" ? "Key features" : "主な特徴"}
+          </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
-            {wood.features.map((f, i) => (
-              <li key={i} className="rounded-lg border border-neutral-200 bg-white p-4">
+            {features.map((f, i) => (
+              <li
+                key={`${f.label}-${i}`}
+                className="rounded-lg border border-neutral-200 bg-white p-4"
+              >
                 <p className="text-sm font-medium">{f.label}</p>
                 <p className="mt-1 text-sm text-neutral-700">{f.text}</p>
               </li>
@@ -43,31 +67,35 @@ export function WoodDetail({wood}: { wood: Wood }) {
         </section>
       )}
 
-      {!!wood.uses?.length && (
+      {!!uses?.length && (
         <section className="mt-8">
-          <h2 className="mb-2 text-xl font-semibold">主な用途</h2>
+          <h2 className="mb-2 text-xl font-semibold">
+            {locale === "en" ? "Typical uses" : "主な用途"}
+          </h2>
           <ul className="list-inside list-disc text-neutral-800">
-            {wood.uses.map((u, i) => (
-              <li key={i}>{u}</li>
+            {uses.map((u, i) => (
+              <li key={`${u}-${i}`}>{u}</li>
             ))}
           </ul>
         </section>
       )}
 
-      {!!wood.notes?.length && (
+      {!!notes?.length && (
         <section className="mt-8">
-          <h2 className="mb-2 text-xl font-semibold">補足</h2>
+          <h2 className="mb-2 text-xl font-semibold">
+            {locale === "en" ? "Notes" : "補足"}
+          </h2>
           <ul className="list-inside list-disc text-neutral-800">
-            {wood.notes.map((n, i) => (
-              <li key={i}>{n}</li>
+            {notes.map((n, i) => (
+              <li key={`${n}-${i}`}>{n}</li>
             ))}
           </ul>
         </section>
       )}
 
-      {!!wood.body?.length && (
+      {!!body?.length && (
         <section className="prose prose-neutral mt-8 max-w-none">
-          {wood.body.map((p, i) => (
+          {body.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </section>
