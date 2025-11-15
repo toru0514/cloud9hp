@@ -31,8 +31,8 @@ export function WoodCard({wood, locale = defaultLocale}: WoodCardProps) {
     locale === "en" ? `View details for ${primaryName}` : `${wood.nameJa}の詳細を見る`;
 
   const rawCatch =
-    locale === "en"
-      ? `Learn more about ${wood.nameEn} wood.`
+    locale === "en" && wood.catchEn
+      ? wood.catchEn
       : wood.catch;
   const displayCatch = rawCatch.replace(/^—\s*|\s*—$/g, "");
 
