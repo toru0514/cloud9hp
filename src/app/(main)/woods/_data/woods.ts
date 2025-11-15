@@ -188,6 +188,10 @@ export const woods: Wood[] = [
       "シカモアは、淡くやわらかな色合いと繊細な杢目が美しい木材。どこか上品で優しく、空間に静かな明るさを添えてくれます。",
       "その美しさと音響特性の良さから、名器「ストラディバリウス」の裏板などにも使用されたと伝えられ、長い年月を超えて愛されてきました。"
     ],
+    leadEn: [
+      "Sycamore is known for its soft, pale color and delicate grain. It brings a gentle, refined brightness to any space.",
+      "Because of its beauty and excellent acoustic properties, it is said to have been used for the backs and sides of legendary instruments such as Stradivarius violins, and has been loved for generations.",
+    ],
     features: [
       {
         label: "色合い",
@@ -196,11 +200,36 @@ export const woods: Wood[] = [
       {label: "杢目（もくめ）", text: "個体差が大きい。とくに「フレイム杢」「縮杢」は美術的価値が高く、高級楽器や工芸品に。"},
       {label: "音響特性と用途", text: "振動をほどよく伝え、柔らかく澄んだ音を響かせます。"}
     ],
+    featuresEn: [
+      {
+        label: "Color",
+        text: "Light, creamy white to yellowish tones with a subtle silky sheen that gently warms over time.",
+      },
+      {
+        label: "Grain",
+        text: "Highly variable; prized flame and fiddleback figures have great artistic value and are sought after for fine instruments and craftwork.",
+      },
+      {
+        label: "Acoustics",
+        text: "Carries vibration well and produces a soft, clear tone, making it a favored wood for stringed instruments.",
+      },
+    ],
     uses: ["弦楽器（ヴァイオリン、チェロ）", "家具", "木製小物", "内装材", "工芸品"],
+    usesEn: [
+      "Violins and cellos",
+      "Furniture",
+      "Small wooden objects",
+      "Interior paneling",
+      "Artisanal craft items",
+    ],
     body: [
       "控えめな中にも確かな個性。ナチュラルで落ち着いた空間演出に最適。",
       "まさに「静かに語りかけてくる」ような存在です。"
-    ]
+    ],
+    bodyEn: [
+      "Understated yet full of character, sycamore is ideal for creating natural, tranquil spaces.",
+      "It feels as if the wood is quietly speaking to you—subtle, but deeply expressive.",
+    ],
   },
   {
     slug: "wenge",
