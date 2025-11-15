@@ -30,6 +30,12 @@ export function WoodCard({wood, locale = defaultLocale}: WoodCardProps) {
   const ariaLabel =
     locale === "en" ? `View details for ${primaryName}` : `${wood.nameJa}の詳細を見る`;
 
+  const rawCatch =
+    locale === "en"
+      ? `Learn more about ${wood.nameEn} wood.`
+      : wood.catch;
+  const displayCatch = rawCatch.replace(/^—\s*|\s*—$/g, "");
+
   return (
     <Link
       href={`/woods/${wood.slug}`}
@@ -60,7 +66,7 @@ export function WoodCard({wood, locale = defaultLocale}: WoodCardProps) {
             </span>
           </h3>
           <p className="mt-1 line-clamp-2 text-sm sm:text-base text-neutral-600">
-            {wood.catch.replace(/^—\s*|\s*—$/g, "")}
+            {displayCatch}
           </p>
         </div>
       </div>
