@@ -240,15 +240,45 @@ export const woods: Wood[] = [
     lead: [
       "深みのある黒に繊細なグレイッシュラインが浮かぶ。独特な色調と力強いコントラストで重厚な美しさをもたらします。"
     ],
+    leadEn: [
+      "Wenge is a deep, dark wood where fine grayish lines float across the surface, creating a bold contrast and a sense of weighty elegance.",
+    ],
     features: [
       {label: "色合い", text: "ダークブラウン〜黒。灰白色のラインが天然のストライプ模様のように出現。"},
       {label: "杢目（もくめ）", text: "通直な木理と縞杢が特徴で現代的なデザインに映えます。"},
       {label: "重さと強度", text: "非常に硬く重厚で耐久性と耐摩耗性に優れます。"}
     ],
+    featuresEn: [
+      {
+        label: "Color",
+        text: "Dark brown to nearly black, with pale gray lines that appear as natural stripes.",
+      },
+      {
+        label: "Grain",
+        text: "Straight grain with strong striping that pairs well with modern, graphic designs.",
+      },
+      {
+        label: "Strength & durability",
+        text: "Extremely hard and dense, with excellent wear and impact resistance.",
+      },
+    ],
     uses: ["高級家具", "フローリング", "カウンター材", "内装仕上げ", "楽器", "アクセサリー", "木工芸品"],
     body: [
       "和・洋問わず空間の印象を引き締め高級感を演出。黒基調のデザインに自然の息吹を取り入れるなら。"
-    ]
+    ],
+    usesEn: [
+      "High‑end furniture",
+      "Flooring",
+      "Countertops",
+      "Interior finishes",
+      "Musical instruments",
+      "Accessories",
+      "Woodcraft pieces",
+    ],
+    bodyEn: [
+      "Wenge sharpens the mood of both Japanese and Western interiors, adding a sense of luxury and depth.",
+      "If you want to bring a touch of nature into a black‑based design, this is a compelling choice.",
+    ],
   },
   {
     slug: "snakewood",
