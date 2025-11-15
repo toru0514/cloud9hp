@@ -86,15 +86,44 @@ export const woods: Wood[] = [
       "ひと目見ただけで印象に残る鮮やかな赤。伐採直後はやや朱色がかった明るい赤色で、時が経つにつれて落ち着いた赤褐色へと深みを増します。",
       "天然の赤色を持つ木材は希少で、その存在感は格別です。"
     ],
+    leadEn: [
+      "Padauk grabs your attention at first glance with its vivid red. Freshly cut, it shows a bright, slightly orange‑tinted red that gradually deepens into a calm reddish brown over time.",
+      "Naturally red woods are rare, and the presence of padauk is truly exceptional.",
+    ],
     features: [
       {label: "色合い", text: "鮮やかなオレンジレッド〜ディープレッド。経年で深い赤褐色へ。"},
       {label: "杢目（もくめ）", text: "通直杢が多く、材によっては美しいリボン杢。"},
       {label: "重さと硬さ", text: "比較的硬く重厚で耐久性が高い。"}
     ],
+    featuresEn: [
+      {
+        label: "Color",
+        text: "Bright orange‑red to deep crimson that matures into a rich reddish brown with age.",
+      },
+      {
+        label: "Grain",
+        text: "Mostly straight grain, sometimes revealing beautiful ribbon figure depending on the board.",
+      },
+      {
+        label: "Weight & hardness",
+        text: "Relatively hard and heavy with excellent durability.",
+      },
+    ],
     uses: ["家具", "フローリング", "楽器", "インテリア装飾", "アクセサリー", "工芸品"],
+    usesEn: [
+      "Furniture",
+      "Flooring",
+      "Musical instruments",
+      "Interior accents",
+      "Accessories",
+      "Craft objects",
+    ],
     body: [
       "大胆でありながらどこか落ち着きのある風合い。空間や作品に「情熱」と「品格」を。"
-    ]
+    ],
+    bodyEn: [
+      "Bold yet composed, padauk brings both passion and dignity to any space or piece.",
+    ],
   },
   {
     slug: "purpleheart",
