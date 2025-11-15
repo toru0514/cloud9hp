@@ -5,18 +5,23 @@ import Image from "next/image";
 import Link from "next/link";
 import SideMenu from "@/components/layout/SideMenu";
 import HamburgerMenu from "@/components/layout/HamburgerMenu";
+import {Locale, defaultLocale} from "@/lib/i18n";
 
-const SimpleHeader = () => {
+type SimpleHeaderProps = {
+  locale?: Locale;
+};
+
+const SimpleHeader = ({locale = defaultLocale}: SimpleHeaderProps) => {
   return (
     <header className="relative w-full bg-white shadow-md px-4 pt-2 pb-4 min-h-[10rem]">
       {/* ナビゲーション：右上（PC） */}
       <div className="hidden md:flex justify-end">
-        <SideMenu variant="simple"/>
+        <SideMenu variant="simple" locale={locale}/>
       </div>
 
       {/* ハンバーガー：右上（モバイル） */}
       <div className="md:hidden flex justify-end">
-        <HamburgerMenu/>
+        <HamburgerMenu locale={locale}/>
       </div>
 
       {/* ロゴ：中央に絶対配置 */}
