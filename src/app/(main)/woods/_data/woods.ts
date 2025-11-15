@@ -31,12 +31,15 @@ export const woods: Wood[] = [
     nameJa: "メープル",
     nameEn: "Maple",
     catch: "— 清潔感と優しさを併せ持つ、やさしい木材 —",
-    catchEn: "aaa",
+    catchEn: "— A gentle wood with a calm, clean presence —",
     lead: [
       "「カエデ」といえば聞いたことがあるのではないでしょうか？メープルシロップ、野球のバット、ギターなど、私たちの生活の中でも馴染み深い存在です。",
       "古くから人々の暮らしに寄り添ってきたメープルは、その明るく滑らかな質感で、今もなお多くの人々に選ばれています。"
     ],
-    leadEn: ["aaa", "aaa"],
+    leadEn: [
+      "Maple is a wood many people know from everyday life: maple syrup, baseball bats, guitars and more.",
+      "For generations it has been a familiar companion in our homes, loved for its bright color and smooth, gentle feel.",
+    ],
     features: [
       {
         label: "色合い",
@@ -49,24 +52,36 @@ export const woods: Wood[] = [
       {label: "硬さと耐久性", text: "広葉樹の中でも比較的硬質で、反りや割れに強く長く使うアイテムに最適です。"}
     ],
     featuresEn: [
-      {label: "aaa", text: "aaa"},
-      {label: "aaa", text: "aaa"},
-      {label: "aaa", text: "aaa"},
+      {
+        label: "Color",
+        text: "Soft, pale tones from milky white to cream. Occasional hints of reddish or brownish color give a warm, clean impression.",
+      },
+      {
+        label: "Grain",
+        text: "Very fine and smooth texture. Rare, highly decorative figures such as bird’s‑eye and flame can appear in some boards.",
+      },
+      {
+        label: "Hardness & durability",
+        text: "Relatively hard and stable for a hardwood, with good resistance to warping and cracking—ideal for items made to last.",
+      },
     ],
     uses: ["家具", "床材", "キッチン用品", "野球バット", "ギター", "バイオリン"],
+    usesEn: ["Furniture", "Flooring", "Kitchenware", "Baseball bats", "Guitars", "Violins"],
     body: [
       "やさしく上品な色味、自然が生んだ美しい杢目。ナチュラルな空間にも、洗練された空間にも馴染みます。",
       "落ち着きの中に個性が光る、使うほどに愛着が湧く木材です。"
     ],
-    usesEn: ["aaa", "aaa"],
-    bodyEn: ["aaa", "aaa"],
+    bodyEn: [
+      "Its gentle, refined color and naturally beautiful grain fit seamlessly into both casual and sophisticated spaces.",
+      "Quiet at first glance yet full of character, maple is a wood that grows more charming the longer you live with it.",
+    ],
   },
   {
     slug: "padauk",
     nameJa: "パドック",
     nameEn: "Padauk",
     catch: "— 深紅にきらめく、情熱の木 —",
-    catchEn: "aaa",
+    catchEn: "— A deep crimson wood that radiates passion —",
     lead: [
       "ひと目見ただけで印象に残る鮮やかな赤。伐採直後はやや朱色がかった明るい赤色で、時が経つにつれて落ち着いた赤褐色へと深みを増します。",
       "天然の赤色を持つ木材は希少で、その存在感は格別です。"
@@ -86,7 +101,7 @@ export const woods: Wood[] = [
     nameJa: "パープルハート",
     nameEn: "Purpleheart",
     catch: "— 深く、美しく、変化する紫の木 —",
-    catchEn: "aaa",
+    catchEn: "— A richly colored purple wood that changes over time —",
     lead: [
       "名前の通り紫色の木材を使用していますが、実は少し不思議な木。切った直後はやや茶色っぽく、時間とともに空気や光に触れることで、鮮やかな紫色へと変化していきます。",
       "木材といえば茶色や白を思い浮かべる方が多いかもしれませんが、パープルハートはその常識を覆す、美しい天然の紫色を持った希少材です。"
@@ -110,7 +125,7 @@ export const woods: Wood[] = [
     nameJa: "シカモア",
     nameEn: "Sycamore",
     catch: "— 静かな輝きを放つ、気品ある白木 —",
-    catchEn: "aaa",
+    catchEn: "— A refined pale wood with a quiet glow —",
     lead: [
       "シカモアは、淡くやわらかな色合いと繊細な杢目が美しい木材。どこか上品で優しく、空間に静かな明るさを添えてくれます。",
       "その美しさと音響特性の良さから、名器「ストラディバリウス」の裏板などにも使用されたと伝えられ、長い年月を超えて愛されてきました。"
@@ -134,7 +149,7 @@ export const woods: Wood[] = [
     nameJa: "ウェンジ",
     nameEn: "Wenge",
     catch: "— 漆黒と灰の織りなす、静謐な存在感 —",
-    catchEn: "aaa",
+    catchEn: "— Deep black and grey grain that exudes calm strength —",
     lead: [
       "深みのある黒に繊細なグレイッシュラインが浮かぶ。独特な色調と力強いコントラストで重厚な美しさをもたらします。"
     ],
@@ -153,7 +168,7 @@ export const woods: Wood[] = [
     nameJa: "スネークウッド",
     nameEn: "Snakewood",
     catch: "— 威厳と美を併せ持つ、木の王 —",
-    catchEn: "aaa",
+    catchEn: "— The “king of woods”, combining dignity and beauty —",
     lead: [
       "蛇の鱗を思わせる独特の模様。圧倒的な存在感と重厚な質感で希少木材の中でも際立つ存在です。",
       "世界でも特に重厚な木材のひとつとして知られ、手に伝わる“詰まり”が特徴。"
@@ -173,7 +188,7 @@ export const woods: Wood[] = [
     nameJa: "ピンクアイボリー",
     nameEn: "Pink Ivory",
     catch: "— 気高く、美しく。木の女王 —",
-    catchEn: "aaa",
+    catchEn: "— Noble and beautiful, often called the queen of woods —",
     lead: [
       "華やかで可憐なピンク色。天然木とは思えないほど鮮やかな色合いを持ち、「木の女王」と称される気品と美しさを備える特別な木材。"
     ],
@@ -192,7 +207,7 @@ export const woods: Wood[] = [
     nameJa: "カリン",
     nameEn: "Karin",
     catch: "— 格式と親しみを備えた、和の名材 —",
-    catchEn: "aaa",
+    catchEn: "— A classic Japanese hardwood with both dignity and warmth —",
     lead: [
       "床柱や仏壇、フローリング、家具など、古くから暮らしに根づいてきた木材。美しい赤みと上品な艶、高い耐久性で幅広く用いられます。"
     ],
@@ -211,7 +226,7 @@ export const woods: Wood[] = [
     nameJa: "パロサント",
     nameEn: "Palo Santo",
     catch: "— 聖なる香りと癒しを宿す、神秘の木 —",
-    catchEn: "aaa",
+    catchEn: "— A sacred wood carrying a gentle, healing fragrance —",
     lead: [
       "スペイン語で「聖なる木」。古代インカの時代から“空間と心を清める特別な木”として大切にされてきました。",
       "手に取れば、甘くウッディな香りがふわり。祈りの気配が宿っているかのようです。"
@@ -235,7 +250,7 @@ export const woods: Wood[] = [
     nameJa: "エボニー（黒檀）",
     nameEn: "Ebony",
     catch: "— 漆黒の気品と圧倒的な硬質感 —",
-    catchEn: "aaa",
+    catchEn: "— Jet‑black elegance with exceptional hardness —",
     lead: [
       "まるで墨を流したような深い黒。漆黒の美しさと比類なき硬さを持つ高級木材。",
       "ギターやバイオリンの指板材として世界中の音楽家に愛され、日本でも高級家具に重用されてきました。"
@@ -255,7 +270,7 @@ export const woods: Wood[] = [
     nameJa: "ローズウッド",
     nameEn: "Rosewood",
     catch: "— 香りと響き、美しさを宿す華やかな木 —",
-    catchEn: "aaa",
+    catchEn: "— A vibrant wood known for its aroma, sound and beauty —",
     lead: [
       "切り出した瞬間に漂う甘い香り。見た目・香り・音の響きで人々を魅了してきた世界的名材。"
     ],
@@ -275,7 +290,7 @@ export const woods: Wood[] = [
     nameJa: "オリーブウッド",
     nameEn: "Olivewood",
     catch: "— 美しき曲線模様と、あたたかな生命力 —",
-    catchEn: "aaa",
+    catchEn: "— Flowing grain patterns full of warmth and life —",
     lead: [
       "ひと目で分かるダイナミックな木目のうねり。はちみつのような明るい色合いで、人を惹きつける魅力に溢れます。"
     ],
@@ -298,7 +313,7 @@ export const woods: Wood[] = [
     nameJa: "ココボロ",
     nameEn: "Cocobolo",
     catch: "— 情熱と艶を宿す、音を奏でる宝石 —",
-    catchEn: "aaa",
+    catchEn: "— A jewel‑like wood that carries both passion and rich tone —",
     lead: [
       "赤・橙・黒が幾重にも重なる宝石のような色合い。削ると甘くスパイシーな香り。存在感と音の深みが際立ちます。"
     ],
@@ -321,7 +336,7 @@ export const woods: Wood[] = [
     nameJa: "ジリコテ",
     nameEn: "Ziricote",
     catch: "— 木が描くアート。幻想的な模様を纏う響きの名材 —",
-    catchEn: "aaa",
+    catchEn: "— Natural artwork with otherworldly patterns and resonant tone —",
     lead: [
       "グレーの地に水墨画のように広がる複雑な模様。自然が生んだ“アートピース”のような木材です。",
       "音響特性と美しさから高級ギター材としての評価が高まり、注目を集めています。"
