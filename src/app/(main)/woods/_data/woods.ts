@@ -135,6 +135,10 @@ export const woods: Wood[] = [
       "名前の通り紫色の木材を使用していますが、実は少し不思議な木。切った直後はやや茶色っぽく、時間とともに空気や光に触れることで、鮮やかな紫色へと変化していきます。",
       "木材といえば茶色や白を思い浮かべる方が多いかもしれませんが、パープルハートはその常識を覆す、美しい天然の紫色を持った希少材です。"
     ],
+    leadEn: [
+      "As its name suggests, purpleheart is a wood known for its striking purple color—but it behaves in a rather mysterious way.",
+      "Freshly cut, it appears more brownish, then slowly shifts to a vivid purple as it reacts with air and light, overturning the common image of wood as simply brown or pale.",
+    ],
     features: [
       {
         label: "色合いの変化",
@@ -143,11 +147,36 @@ export const woods: Wood[] = [
       {label: "杢目（もくめ）", text: "比較的おとなしい直線的な杢目が多いが、まれに波状やリボン杢が現れることも。"},
       {label: "硬さと重さ", text: "非常に硬く重厚。耐久性に優れる一方で割れやすさもあるため丁寧な扱いが必要です。"}
     ],
+    featuresEn: [
+      {
+        label: "Color change",
+        text: "Starts out as a dark brown to reddish brown after machining, then shifts to deep purples and violet‑reds under light, finally mellowing into a dignified dark purple over the years.",
+      },
+      {
+        label: "Grain",
+        text: "Typically shows a calm, straight grain, though wavy or ribbon figure can occasionally appear, adding visual drama.",
+      },
+      {
+        label: "Hardness & weight",
+        text: "Extremely hard and dense, offering excellent durability but requiring careful handling to avoid cracking.",
+      },
+    ],
     uses: ["アクセサリー", "装飾小物", "高級家具のポイント使い", "楽器", "寄木細工"],
+    usesEn: [
+      "Accessories",
+      "Decorative objects",
+      "Accent parts in fine furniture",
+      "Musical instruments",
+      "Marquetry and inlay work",
+    ],
     body: [
       "パープルハートの木言葉は「やさしい愛情」「誠実」「変わらぬ愛」。深い紫には気品と静かな情熱が宿ります。",
       "大切な人へのギフトや、一生使い続けたいアイテムに。"
-    ]
+    ],
+    bodyEn: [
+      "Purpleheart is often associated with meanings like gentle affection, sincerity, and unwavering love. Its deep purple hue carries both elegance and quiet passion.",
+      "It is a wonderful choice for a special gift or a piece you want to keep by your side for a lifetime.",
+    ],
   },
   {
     slug: "sycamore",
