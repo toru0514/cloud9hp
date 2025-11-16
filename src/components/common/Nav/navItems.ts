@@ -19,12 +19,12 @@ const navItems: Record<Locale, NavItemType[]> = {
   ],
   en: [
     {id: 1, label: "HOME", link: "/en"},
-    {id: 2, label: "PRODUCTS", link: "/product"},
-    {id: 3, label: "FEATURES", link: "/features"},
+    {id: 2, label: "PRODUCTS", link: "/en/product"},
+    {id: 3, label: "FEATURES", link: "/en/features"},
     {id: 4, label: "GALLERY", link: "/gallery"},
-    {id: 5, label: "WOODS", link: "/woods"},
-    {id: 6, label: "ABOUT", link: "/about"},
-    {id: 7, label: "ORDER", link: "/order-made"},
+    {id: 5, label: "WOODS", link: "/en/woods"},
+    {id: 6, label: "ABOUT", link: "/en/about"},
+    {id: 7, label: "ORDER", link: "/en/order-made"},
     {id: 8, label: "CONTACT", link: "/contact"},
   ],
 };
