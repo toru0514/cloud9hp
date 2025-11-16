@@ -36,9 +36,11 @@ export function WoodCard({wood, locale = defaultLocale}: WoodCardProps) {
       : wood.catch;
   const displayCatch = rawCatch.replace(/^—\s*|\s*—$/g, "");
 
+  const href = locale === "en" ? `/en/woods/${wood.slug}` : `/woods/${wood.slug}`;
+
   return (
     <Link
-      href={`/woods/${wood.slug}`}
+      href={href}
       className="group block overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md"
       aria-label={ariaLabel}
     >

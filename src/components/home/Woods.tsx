@@ -51,7 +51,7 @@ export default function WoodsIntroArea({locale = defaultLocale}: WoodsIntroAreaP
                 return (
                   <li key={w!.slug} className="block sm:hidden">
                     <Link
-                      href={`/woods/${w!.slug}`}
+                      href={locale === "en" ? `/en/woods/${w!.slug}` : `/woods/${w!.slug}`}
                       className="group block overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm hover:shadow-md transition"
                     >
                       <div className="relative aspect-[4/3] w-full">
@@ -86,7 +86,7 @@ export default function WoodsIntroArea({locale = defaultLocale}: WoodsIntroAreaP
                 return (
                   <li key={w!.slug} className="hidden sm:block">
                     <Link
-                      href={`/woods/${w!.slug}`}
+                      href={locale === "en" ? `/en/woods/${w!.slug}` : `/woods/${w!.slug}`}
                       className="group block overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm hover:shadow-md transition"
                     >
                       <div className="relative aspect-[4/3] w-full">
@@ -125,7 +125,10 @@ export default function WoodsIntroArea({locale = defaultLocale}: WoodsIntroAreaP
             </p>
 
             <div className="items-center flex justify-center pt-6">
-              <Button link="/woods" label={dictionary.buttonLabel}/>
+              <Button
+                link={locale === "en" ? "/en/woods" : "/woods"}
+                label={dictionary.buttonLabel}
+              />
             </div>
           </div>
         </div>

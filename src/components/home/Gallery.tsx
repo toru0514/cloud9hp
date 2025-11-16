@@ -19,7 +19,10 @@ const GalleryArea = ({locale = defaultLocale}: GalleryAreaProps) => {
         <GalleryImageGrid/>
       </div>
       <div className="items-center flex justify-center pt-6">
-        <Button link="/gallery" label={dictionary.buttonLabel}/>
+        <Button
+          link={locale === "en" ? "/en/gallery" : "/gallery"}
+          label={dictionary.buttonLabel}
+        />
       </div>
     </SectionContainer>
   );
