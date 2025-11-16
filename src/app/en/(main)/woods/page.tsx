@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
-import {woods} from "../../(main)/woods/_data/woods";
-import {WoodCard} from "../../(main)/woods/_components/WoodCard";
+import {woods} from "../../../(main)/woods/_data/woods";
+import {WoodCard} from "../../../(main)/woods/_components/WoodCard";
 
 export const metadata: Metadata = {
   title: "Wood Catalog",

@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import {notFound} from "next/navigation";
-import {woods} from "../../../(main)/woods/_data/woods";
-import {WoodDetail} from "../../../(main)/woods/_components/WoodDetail";
+import {woods} from "../../../../(main)/woods/_data/woods";
+import {WoodDetail} from "../../../../(main)/woods/_components/WoodDetail";
 
 export async function generateStaticParams() {
   return woods.map((w) => ({slug: w.slug}));
@@ -23,3 +23,4 @@ export default function WoodDetailEnPage({params}: { params: { slug: string } })
   if (!wood) return notFound();
   return <WoodDetail wood={wood} locale="en"/>;
 }
+
