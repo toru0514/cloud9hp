@@ -12,6 +12,7 @@ import {
 } from "@/components/home/product/productData";
 import {ProductCard} from "@/components/home/product/ProductCard";
 import {Locale, defaultLocale} from "@/lib/i18n";
+import {productDetailPages} from "@/data/productDetails";
 
 const productSections = [
   {id: undefined, title: "- WOOD RING -", items: woodringItems},
@@ -80,6 +81,7 @@ type ProductItem = {
   image: string;
   url: string;
   mUrl: string;
+  slug?: string;
 };
 
 type ProductSectionProps = {
@@ -103,8 +105,17 @@ const ProductSection = ({
     <div className="max-w-screen-xl mx-auto">
       <h2 className="pb-2 text-2xl font-semibold text-center">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((item) => (
-            <ProductCard
+          {items.map((item) => {
+            const slug = item.slug;
+            const detailInfo = slug ? productDetailPages[slug] : undefined;
+            const shouldShowDetailLink = Boolean(detailInfo && locale === "jp");
+
+            const detailHref = detailInfo && slug
+              ? `/product/${detailInfo.sectionPath}/${slug}`
+              : undefined;
+
+            return (
+              <ProductCard
               key={item.id}
               enName={item.enName}
               jpName={item.jpName}
@@ -116,9 +127,12 @@ const ProductSection = ({
               image={item.image}
               url={item.url}
               murl={item.mUrl}
+              detailHref={shouldShowDetailLink ? detailHref : undefined}
+              showExternalLinks={!shouldShowDetailLink}
               onImageClick={(src, alt) => onImageClick(src, alt)}
             />
-        ))}
+          );
+        })}
       </div>
     </div>
   </div>

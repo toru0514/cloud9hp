@@ -3,8 +3,46 @@ import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
 
+const hasMeaningfulText = (value: string) =>
+  /[一-龠ぁ-ヴーａ-ｚＡ-Ｚa-zA-Z0-9]/.test(value);
+
 export async function POST(req: NextRequest) {
-  const {name, email, content} = await req.json();
+  const {name, email, content, website, turnstileToken} = await req.json();
+
+  if (website) {
+    return new NextResponse("Spam detected", {status: 400});
+  }
+
+  if (!hasMeaningfulText(content || "")) {
+    return new NextResponse("No meaningful content", {status: 400});
+  }
+
+  if (!turnstileToken) {
+    return new NextResponse("Token missing", {status: 400});
+  }
+
+  if (!process.env.TURNSTILE_SECRET_KEY) {
+    return new NextResponse("Turnstile not configured", {status: 500});
+  }
+
+  const params = new URLSearchParams();
+  params.append("secret", process.env.TURNSTILE_SECRET_KEY);
+  params.append("response", turnstileToken);
+
+  const verification = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    body: params.toString(),
+  });
+
+  const verificationResult = await verification.json();
+  if (!verificationResult.success) {
+    return new NextResponse("Turnstile verification failed", {status: 400});
+  }
+
+  const sanitizedContent = content ?? "";
+  const sanitizedName = name ?? "";
+  const sanitizedEmail = email ?? "";
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -20,11 +58,11 @@ export async function POST(req: NextRequest) {
     to: process.env.GMAIL_USER,
     subject: "【お問い合わせ】木材工房cloud9 ホームページより",
     text: `
-お名前: ${name}
-メールアドレス: ${email}
+お名前: ${sanitizedName}
+メールアドレス: ${sanitizedEmail}
 
 お問い合わせ内容:
-${content}
+${sanitizedContent}
     `,
   };
 
@@ -34,7 +72,7 @@ ${content}
     to: email,
     subject: "【木材工房cloud9】お問い合わせありがとうございます",
     text: `
-${name} 様
+${sanitizedName} 様
 
 木材工房cloud9です。
 
@@ -44,11 +82,11 @@ ${name} 様
 以下の内容で、お問い合わせを承りました。
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-お名前：${name}
-メールアドレス：${email}
+お名前：${sanitizedName}
+メールアドレス：${sanitizedEmail}
 
 お問い合わせ内容：
-${content}
+${sanitizedContent}
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 内容を確認のうえ、通常1〜3営業日以内に担当者よりご連絡いたします。

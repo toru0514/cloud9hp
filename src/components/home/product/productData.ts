@@ -3,6 +3,7 @@
 export const woodringItems = [
   {
     id: 1,
+    slug: "purple-heart",
     enName: "PURPLE HEART",
     jpName: "パープルハート",
     description: "「信頼」や「確実性」の意味をともなうパープルカラーの指輪。指に取り入れるだけでいつもより大人な雰囲気に包まれます。",
@@ -16,6 +17,7 @@ export const woodringItems = [
     id: 2,
     enName: 'SATINE',
     jpName: 'サティーネ',
+    slug: 'satine',
     description: "「深紅の赤」と言われる見れば見るほど美しい指輪。金色の筋が現れ、見る方向によって色合いと光沢の変化が感じられます。",
     descriptionEn:
       "A ring in a deep crimson red that becomes more captivating the longer you look. Fine golden streaks appear, and the tone and sheen shift subtly as you turn it in the light.",
@@ -33,6 +35,7 @@ export const woodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/5378f69a0b334a2a9bef1d92496bbabd/karin.jpeg",
     url: 'https://www.creema.jp/item/14943464/detail',
     mUrl: 'https://minne.com/items/34692007',
+    slug: "karin",
   },
   {
     id: 4,
@@ -44,6 +47,7 @@ export const woodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/db1733a745544cfdbe8f970f240cc7e6/pinkivory.jpeg",
     url: 'https://www.creema.jp/item/14943315/detail',
     mUrl: 'https://minne.com/items/34691963',
+    slug: "pink-ivory",
   },
   {
     id: 5,
@@ -55,6 +59,7 @@ export const woodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/6a2326d63fbd4cd1b623f7b2a14e4d47/snakewood.jpeg",
     url: 'https://www.creema.jp/item/14943228/detail',
     mUrl: 'https://minne.com/items/34691875',
+    slug: "snake-wood",
   },
   {
     id: 6,
@@ -66,6 +71,7 @@ export const woodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/dcb378cb7de648259872bd14f9714bb8/maple.jpeg",
     url: 'https://www.creema.jp/item/14943075/detail',
     mUrl: 'https://minne.com/items/34691841',
+    slug: "maple",
   },
   {
     id: 7,
@@ -77,6 +83,7 @@ export const woodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/4bf600f6d25f4cd8add075692e210fc3/wenge.jpeg",
     url: 'https://www.creema.jp/item/14943033/detail',
     mUrl: 'https://minne.com/items/34691768',
+    slug: "wenge",
   },
   {
     id: 8,
@@ -88,6 +95,7 @@ export const woodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/ecd4910adac8417fbfcc78f06e228475/rosewood.jpeg",
     url: 'https://www.creema.jp/item/14942931/detail',
     mUrl: 'https://minne.com/items/34691693',
+    slug: "rosewood",
   },
   {
     id: 9,
@@ -99,6 +107,7 @@ export const woodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/11ae225f7ffe4f688db49eee09301f06/padauk.jpeg",
     url: 'https://www.creema.jp/item/14943075/detail',
     mUrl: 'https://minne.com/items/34691841',
+    slug: "padauk",
   },
 ];
 export const crystalwoodringItems = [
@@ -112,6 +121,7 @@ export const crystalwoodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/1ba24f36b25544d492a4b00dca2c194c/image1.jpeg",
     url: 'https://www.creema.jp/item/15236735/detail',
     mUrl: 'https://minne.com/items/34692090',
+    slug: "crystal-karin",
   },
   {
     id: 2,
@@ -123,6 +133,7 @@ export const crystalwoodringItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/b3fb02838d5c4dedbee3b5464a58337c/image2.jpeg",
     url: 'https://www.creema.jp/item/15236609/detail',
     mUrl: 'https://minne.com/items/35274325',
+    slug: "crystal-ebony",
   },
   {
     id: 3,
@@ -298,6 +309,7 @@ export const woodtiepinItems = [
     image: "https://images.microcms-assets.io/assets/f76a4988862a4d59968538e5355a57d3/0ab2d7f681f24a409ca25688282fa542/2025-07-20_00-35-32_790.jpeg",
     url: 'https://www.creema.jp/item/19681256/detail',
     mUrl: 'https://minne.com/items/43679187',
+    slug: "crystal-maple",
   },
   {
     id: 3,

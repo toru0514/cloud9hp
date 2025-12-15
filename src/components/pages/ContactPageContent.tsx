@@ -1,7 +1,15 @@
 "use client";
 
-import {useState} from "react";
+import {useEffect, useState, useRef} from "react";
 import {Locale, defaultLocale} from "@/lib/i18n";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (element: Element, options: {sitekey: string; callback: (token: string) => void; "error-callback"?: () => void}) => void;
+    };
+  }
+}
 
 type ContactPageContentProps = {
   locale?: Locale;
@@ -12,30 +20,85 @@ const ContactPageContent = ({locale = defaultLocale}: ContactPageContentProps) =
     name: "",
     email: "",
     content: "",
+    website: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileError, setTurnstileError] = useState("");
+  const turnstileRef = useRef<HTMLDivElement | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({...formData, [e.target.name]: e.target.value});
+  };
+
+  useEffect(() => {
+    const existing = document.getElementById("turnstile-script");
+    if (!existing) {
+      const script = document.createElement("script");
+      script.id = "turnstile-script";
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+
+    const interval = setInterval(() => {
+      if (turnstileRef.current && window.turnstile) {
+        window.turnstile.render(turnstileRef.current, {
+          sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "",
+          callback: (token: string) => {
+            setTurnstileToken(token);
+            setTurnstileError("");
+          },
+          "error-callback": () => setTurnstileError("Verification failed"),
+        });
+        clearInterval(interval);
+      }
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const hasMeaningfulText = (value: string) => {
+    return /[一-龠ぁ-ゔァ-ヴーａ-ｚＡ-Ｚa-zA-Z0-9]/.test(value);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(false);
+    setTurnstileError("");
+
+    if (!hasMeaningfulText(formData.content)) {
+      setError(true);
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!turnstileToken) {
+      setTurnstileError("We could not verify you are human.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (formData.website) {
+      setError(true);
+      setIsSubmitting(false);
+      return;
+    }
 
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(formData),
+      body: JSON.stringify({...formData, turnstileToken}),
     });
 
     if (res.ok) {
       setSubmitted(true);
-      setFormData({name: "", email: "", content: ""});
+      setFormData({name: "", email: "", content: "", website: ""});
     } else {
       setError(true);
     }
@@ -127,6 +190,25 @@ const ContactPageContent = ({locale = defaultLocale}: ContactPageContentProps) =
             />
           </div>
 
+          <input
+            name="website"
+            type="text"
+            value={formData.website}
+            onChange={handleChange}
+            className="sr-only"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+
+          <div className="h-14">
+            <div ref={turnstileRef} />
+            {turnstileError && (
+              <p className="text-xs text-red-500 mt-2" role="alert">
+                {turnstileError}
+              </p>
+            )}
+          </div>
+
           <button
             type="submit"
             disabled={isSubmitting}
@@ -147,4 +229,3 @@ const ContactPageContent = ({locale = defaultLocale}: ContactPageContentProps) =
 };
 
 export default ContactPageContent;
-

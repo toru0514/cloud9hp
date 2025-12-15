@@ -31,13 +31,12 @@ const featureEntries: FeatureEntry[] = [
 そっと寄り添うような存在を、ぜひ日常に取り入れてみてください。`,
       },
       en: {
-        title: "◆ Comfort & Warmth",
-        description: `Think about how a wooden table, a timber house, or a floor under bare feet instantly makes you feel at ease.
-Wooden accessories deliver that same gentle comfort. They never feel cold or rigid like metal
-and they pick up your body heat in seconds.
-
-The more you wear them, the more the grain and tone evolve, creating a patina that belongs only to you.
-Invite that quiet, reassuring presence into your everyday life.`,
+        title: "◆ Comfort & Warmth of Wood",
+        description: `Have you ever felt a sense of comfort when touching a wooden table, a wooden home, or a wooden floor with bare feet?
+Wooden accessories carry the same gentle warmth of nature.
+Unlike metal, they are neither cold nor rigid, blending seamlessly with your skin while radiating warmth.
+Moreover, as you use them, they develop character and grow into a color unique to you—something only wood can offer.
+Embrace this gentle presence in your everyday life.`,
       },
     },
   },
@@ -54,10 +53,10 @@ Invite that quiet, reassuring presence into your everyday life.`,
       },
       en: {
         title: "◆ Water Resistance",
-        description: `Many people wonder whether wooden accessories can handle water.
-We seal each piece with a light layer of natural beeswax, so light splashes are no problem.
-Even in our soak tests the pieces showed no visible change, allowing you to wear them with confidence.
-If the wax gradually fades, simply apply any beeswax balm at home for quick maintenance.`,
+        description: `Some may worry, “Is it okay if wood accessories get wet?”
+Our products are coated with a small amount of beeswax, making them resistant to light water exposure.
+Even in immersion tests, no changes were observed, ensuring safe use.
+Since beeswax is a natural material, you can easily reapply commercially available beeswax for maintenance if it wears off.`,
       },
     },
   },
@@ -75,12 +74,11 @@ If the wax gradually fades, simply apply any beeswax balm at home for quick main
 ※ピアスなど、一部アイテムには金属パーツ（サージカルステンレス）を使用しております。`,
       },
       en: {
-        title: "◆ Allergy-Friendly",
-        description: `Rings, bangles, and ear accessories are usually made of metal, so people with metal allergies often have to avoid them.
-Our pieces are crafted primarily from carefully selected wood so that more people can wear them comfortably.
-They feel smooth and warm against the skin, bringing a natural sense of ease every time you put them on.
-
-*Some items such as piercings include minimal surgical stainless parts.`,
+        title: "◆Suitable for Metal Allergy",
+        description: `Many rings, earrings, and bangles are typically made of metal, making them unsuitable for people with metal allergies.
+Our products are wood-based accessories designed for such individuals to wear with peace of mind.
+They are gentle on the skin and provide a natural warmth every time you wear them.
+Note: Some items, such as earrings, use metal parts (surgical stainless steel).`,
       },
     },
   },
@@ -98,12 +96,12 @@ They feel smooth and warm against the skin, bringing a natural sense of ease eve
 そんな儚くも美しい木の世界を、ぜひお楽しみください。`,
       },
       en: {
-        title: "◆ Rare Materials",
-        description: `While species like zelkova or cypress are familiar in Japan, our accessories also feature rare timbers gathered from around the world.
-Some are already difficult to source, which means a design may never be recreated in the exact same way twice.
-
-Every piece of wood is unique—no identical grain, no identical story.
-Enjoy the once-in-a-lifetime encounter with these beautiful and fleeting materials.`,
+        title: "◆ Rarity",
+        description: `In Japan, woods like zelkova and cypress are well-known, and SPF or whitewood is common.
+However, our products feature rare woods sourced from around the world.
+Some of these woods are now nearly impossible to obtain, making it unlikely that identical pieces can ever be reproduced.
+Each piece of wood is a natural material, unique and unrepeatable—every encounter is truly once-in-a-lifetime.
+Please enjoy the fleeting yet beautiful world of wood.`,
       },
     },
   },
@@ -122,12 +120,11 @@ Enjoy the once-in-a-lifetime encounter with these beautiful and fleeting materia
 木が本来持つ美しさを、ぜひお楽しみください。`,
       },
       en: {
-        title: "◆ Natural Colors",
-        description: `Many people imagine wood as simply brown or pale beige, but nature offers far more colors.
-We select timbers that naturally show purple, pink, jet-black, monochrome stripes, deep browns, and more.
-
-We never add artificial dyes. Instead we polish each piece through more than ten steps to reveal the original glow of the wood.
-Enjoy the colors and textures that only nature can create.`,
+        title: "◆ Naturally Uncolored",
+        description: `When people think of wood, they often imagine brown or white.
+However, our products use woods with naturally rich and unique colors, such as purple, pink, black, black-and-white, and dark brown.
+We do not apply any artificial coloring. Instead, the natural colors of the wood are preserved and carefully polished through multiple stages to bring out its natural luster and shine.
+Please enjoy the inherent beauty of wood itself.`,
       },
     },
   },
