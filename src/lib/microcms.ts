@@ -48,14 +48,28 @@ export type Product = {
   detailImages?: { image: MicroCMSImage }[];
 } & MicroCMSListContent;
 
-// Category → sectionPath mapping
-const CATEGORY_SECTION_PATH: Partial<Record<ProductCategory, string>> = {
+// Category → URL sectionPath mapping
+const CATEGORY_SECTION_PATH: Record<ProductCategory, string> = {
   woodring: "wood-ring",
   crystalwoodring: "crystalwoodring",
+  bangle: "bangle",
+  earcuff: "earcuff",
+  earcuffleaf: "earcuffleaf",
+  earring: "earring",
+  woodtiepin: "woodtiepin",
 };
 
-export function getSectionPath(category: ProductCategory): string | undefined {
+// URL sectionPath → category の逆引き
+const SECTION_PATH_CATEGORY: Record<string, ProductCategory> = Object.fromEntries(
+  Object.entries(CATEGORY_SECTION_PATH).map(([k, v]) => [v, k as ProductCategory]),
+) as Record<string, ProductCategory>;
+
+export function getSectionPath(category: ProductCategory): string {
   return CATEGORY_SECTION_PATH[category];
+}
+
+export function getCategoryFromSection(section: string): ProductCategory | undefined {
+  return SECTION_PATH_CATEGORY[section];
 }
 
 /** microCMS のセレクトフィールド(配列)からカテゴリ文字列を取得 */
@@ -125,21 +139,20 @@ export async function getProductBySlug(
 }
 
 export async function getProductsWithDetail(
-  sectionPath: string,
+  sectionPath?: string,
 ): Promise<Product[]> {
-  // Find category for this sectionPath
-  const category = (
-    Object.entries(CATEGORY_SECTION_PATH) as [ProductCategory, string][]
-  ).find(([, path]) => path === sectionPath)?.[0];
+  const category = sectionPath ? getCategoryFromSection(sectionPath) : undefined;
 
-  if (!category) return [];
+  const filters = category
+    ? `category[equals]${category}[and]detailText[exists]`
+    : `detailText[exists]`;
 
   try {
     const data = await getClient().getList<Product>({
       endpoint: PRODUCTS_ENDPOINT,
       queries: {
         limit: 100,
-        filters: `category[equals]${category}[and]detailText[exists]`,
+        filters,
         orders: "sortOrder",
       },
     });

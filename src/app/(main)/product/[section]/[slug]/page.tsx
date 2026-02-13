@@ -1,17 +1,26 @@
 import type {Metadata} from "next";
 import {notFound} from "next/navigation";
 import ProductWoodRingDetailContent from "@/components/pages/ProductWoodRingDetailContent";
-import {getCategoryValue, getProductBySlug, getProductsWithDetail} from "@/lib/microcms";
+import {
+  getCategoryFromSection,
+  getCategoryValue,
+  getProductBySlug,
+  getProductsWithDetail,
+  getSectionPath,
+} from "@/lib/microcms";
 
 export const revalidate = 60;
 
 export async function generateStaticParams() {
-  const products = await getProductsWithDetail("crystalwoodring");
-  return products.map((p) => ({slug: p.slug}));
+  const products = await getProductsWithDetail();
+  return products.map((p) => ({
+    section: getSectionPath(getCategoryValue(p)),
+    slug: p.slug,
+  }));
 }
 
 export async function generateMetadata(
-  {params}: { params: Promise<{ slug: string }> },
+  {params}: { params: Promise<{ section: string; slug: string }> },
 ): Promise<Metadata> {
   const {slug} = await params;
   const product = await getProductBySlug(slug);
@@ -27,11 +36,16 @@ export async function generateMetadata(
   };
 }
 
-export default async function CrystalWoodRingDetailPage({params}: { params: Promise<{ slug: string }> }) {
-  const {slug} = await params;
+export default async function ProductDetailPage(
+  {params}: { params: Promise<{ section: string; slug: string }> },
+) {
+  const {section, slug} = await params;
+  const category = getCategoryFromSection(section);
+  if (!category) return notFound();
+
   const product = await getProductBySlug(slug);
 
-  if (!product || !product.detailText || getCategoryValue(product) !== "crystalwoodring") {
+  if (!product || !product.detailText || getCategoryValue(product) !== category) {
     return notFound();
   }
 

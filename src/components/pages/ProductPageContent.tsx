@@ -96,7 +96,7 @@ const ProductSection = ({
           {items.map((item) => {
             const shouldShowDetailLink = Boolean(item.hasDetail && item.sectionPath && locale === "jp");
 
-            const detailHref = item.hasDetail && item.sectionPath && item.slug
+            const detailHref = shouldShowDetailLink && item.slug
               ? `/product/${item.sectionPath}/${item.slug}`
               : undefined;
 
