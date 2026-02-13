@@ -33,7 +33,7 @@ export const ProductCard = ({
       <h3 className="text-lg font-semibold mb-2">{jpName}</h3>
 
       <div className="relative w-full aspect-square mb-4">
-        <Image src={image} alt={alt} fill className="object-cover"/>
+        <Image src={image} alt={alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover"/>
         {onImageClick && (
           <button
             type="button"

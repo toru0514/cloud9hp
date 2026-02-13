@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import {snsLinks} from "@/data/snsLinks";
 import SectionTitle from "@/components/ui/SectionTitle";
 import SectionContainer from "@/components/ui/SectionContainer";
@@ -32,10 +33,11 @@ const SnsLinks = ({locale = defaultLocale}: SnsLinksProps) => {
               rel="noopener noreferrer"
               className="sm:bg-white hover:shadow-lg transition sm:p-4 sm:rounded-xl text-center"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={src}
                 alt={sns.name}
+                width={64}
+                height={64}
                 className="h-12 sm:h-12 md:h-14 lg:h-16 w-auto mx-auto object-contain rounded-lg"
               />
             </a>

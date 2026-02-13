@@ -54,6 +54,7 @@ const GalleryImageGrid = () => {
                             src={image.url}
                             alt={image.alt}
                             fill
+                            sizes="(min-width: 1024px) 40vw, 50vw"
                             className={clsx(
                                 "object-cover w-full h-full transition-opacity duration-1500",
                                 fade[index] ? "opacity-100" : "opacity-0"

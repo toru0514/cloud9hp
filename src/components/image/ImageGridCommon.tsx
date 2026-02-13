@@ -28,6 +28,7 @@ const ImageGridWithLink = ({images, columns = 2}: Props) => {
               alt={img.alt}
               width={600}
               height={600}
+              sizes={`(min-width: 1024px) ${Math.floor(60 / columns)}vw, ${Math.floor(100 / columns)}vw`}
               className="object-cover w-full h-full min-w-[80px] min-h-[80px]"
             />
           </Link>

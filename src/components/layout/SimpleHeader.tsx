@@ -34,6 +34,7 @@ const SimpleHeader = ({locale = defaultLocale}: SimpleHeaderProps) => {
             src="/header/logo.png"
             alt="Cloud9 Logo"
             fill
+            sizes="(min-width: 1024px) 112px, 96px"
             className="object-contain"
           />
         </div>
