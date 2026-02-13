@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import SectionTitle from "@/components/ui/SectionTitle";
 import SectionContainer from "@/components/ui/SectionContainer";
 import {shopLinks} from "@/data/shopLinks";
@@ -25,10 +26,11 @@ const OnlineShopArea = ({locale = defaultLocale}: OnlineShopAreaProps) => {
             rel="noopener noreferrer"
             className="hover:shadow-lg transition bg-white p-2 rounded-xl text-center"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={shop.icon}
               alt={shop.name}
+              width={48}
+              height={48}
               className="h-12 w-auto mx-auto object-contain"
             />
           </a>

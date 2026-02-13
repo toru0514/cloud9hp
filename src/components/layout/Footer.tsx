@@ -25,6 +25,7 @@ const Footer = ({locale = defaultLocale}: FooterProps) => {
                 src="/footer/footer-logo.png"
                 alt="Footer Logo"
                 fill
+                sizes="(min-width: 1024px) 192px, (min-width: 768px) 160px, (min-width: 640px) 128px, 96px"
                 className="object-contain"
               />
             </div>

@@ -35,6 +35,8 @@ const Header = ({locale = defaultLocale}: HeaderProps) => {
           src={headerImg.url}
           alt={headerImg.alt}
           fill
+          priority
+          sizes="100vw"
           className={`object-cover object-center transition-transform duration-[5000ms] ease-in-out ${
             isZoomed ? "scale-100" : "scale-200"
           }`}
@@ -43,7 +45,7 @@ const Header = ({locale = defaultLocale}: HeaderProps) => {
 
       {/* ロゴ */}
       <div className="absolute top-0 left-1 lg:left-2 w-20 h-20 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-42 lg:h-42">
-        <Image src="/header/logo.png" alt="Overlay Logo" fill className="object-contain"/>
+        <Image src="/header/logo.png" alt="Overlay Logo" fill sizes="(min-width: 1024px) 168px, (min-width: 768px) 96px, 80px" className="object-contain"/>
       </div>
 
       {/* キャッチコピー */}

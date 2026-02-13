@@ -9,6 +9,7 @@ export const FeatureSlide = ({feature}: { feature: FeatureContent }) => (
         alt={feature.title}
         width={600}
         height={600}
+        sizes="(min-width: 768px) 50vw, 100vw"
         className="w-full h-auto object-cover"
       />
     </div>

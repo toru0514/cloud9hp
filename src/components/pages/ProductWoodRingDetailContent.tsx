@@ -93,6 +93,7 @@ const ProductWoodRingDetailContent = ({
                       src={images[(previewIndex - 1 + images.length) % images.length]}
                       alt={alt}
                       fill
+                      sizes="56px"
                       className="object-cover"
                     />
                   </div>
@@ -109,6 +110,7 @@ const ProductWoodRingDetailContent = ({
                   src={images[previewIndex]}
                   alt={alt}
                   fill
+                  sizes="(min-width: 640px) 480px, 400px"
                   className="object-cover transition-transform duration-200 group-hover:scale-105"
                 />
               </button>
@@ -128,6 +130,7 @@ const ProductWoodRingDetailContent = ({
                       src={images[(previewIndex + 1) % images.length]}
                       alt={alt}
                       fill
+                      sizes="56px"
                       className="object-cover"
                     />
                   </div>
