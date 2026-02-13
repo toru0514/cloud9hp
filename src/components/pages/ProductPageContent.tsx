@@ -1,28 +1,8 @@
 "use client";
 
 import React, {useState} from "react";
-import {
-  bangleItems,
-  crystalwoodringItems,
-  earcuffItems,
-  earcuffleafItems,
-  earringItems,
-  woodringItems,
-  woodtiepinItems,
-} from "@/components/home/product/productData";
 import {ProductCard} from "@/components/home/product/ProductCard";
 import {Locale, defaultLocale} from "@/lib/i18n";
-import {productDetailPages} from "@/data/productDetails";
-
-const productSections = [
-  {id: undefined, title: "- WOOD RING -", items: woodringItems},
-  {id: "crystalwoodring", title: "- CRYSTAL & WOOD RING -", items: crystalwoodringItems},
-  {id: "bangle", title: "- WOOD BANGLE -", items: bangleItems},
-  {id: "earcuff", title: "- WOOD EARCUFF -", items: earcuffItems},
-  {id: "earcuffleaf", title: "- WOOD EARCUFF LEAF -", items: earcuffleafItems},
-  {id: "earring", title: "- WOOD EARRING -", items: earringItems},
-  {id: "tiepin", title: "- WOOD TIE PIN -", items: woodtiepinItems},
-];
 
 const bgColors = ["bg-white", "bg-neutral-100"];
 
@@ -72,7 +52,7 @@ function Lightbox({
   );
 }
 
-type ProductItem = {
+export type ProductItemData = {
   id: number;
   enName: string;
   jpName: string;
@@ -82,12 +62,20 @@ type ProductItem = {
   url: string;
   mUrl: string;
   slug?: string;
+  hasDetail?: boolean;
+  sectionPath?: string;
+};
+
+export type ProductSectionData = {
+  id?: string;
+  title: string;
+  items: ProductItemData[];
 };
 
 type ProductSectionProps = {
   id?: string;
   title: string;
-  items: ProductItem[];
+  items: ProductItemData[];
   index: number;
   locale: Locale;
   onImageClick: (src: string, alt?: string) => void;
@@ -106,12 +94,10 @@ const ProductSection = ({
       <h2 className="pb-2 text-2xl font-semibold text-center">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item) => {
-            const slug = item.slug;
-            const detailInfo = slug ? productDetailPages[slug] : undefined;
-            const shouldShowDetailLink = Boolean(detailInfo && locale === "jp");
+            const shouldShowDetailLink = Boolean(item.hasDetail && item.sectionPath && locale === "jp");
 
-            const detailHref = detailInfo && slug
-              ? `/product/${detailInfo.sectionPath}/${slug}`
+            const detailHref = item.hasDetail && item.sectionPath && item.slug
+              ? `/product/${item.sectionPath}/${item.slug}`
               : undefined;
 
             return (
@@ -120,7 +106,7 @@ const ProductSection = ({
               enName={item.enName}
               jpName={item.jpName}
               description={
-                locale === "en" && "descriptionEn" in item && item.descriptionEn
+                locale === "en" && item.descriptionEn
                   ? item.descriptionEn
                   : item.description
               }
@@ -140,9 +126,10 @@ const ProductSection = ({
 
 type ProductPageContentProps = {
   locale?: Locale;
+  sections: ProductSectionData[];
 };
 
-const ProductPageContent = ({locale = defaultLocale}: ProductPageContentProps) => {
+const ProductPageContent = ({locale = defaultLocale, sections}: ProductPageContentProps) => {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage>(null);
 
   return (
@@ -151,7 +138,7 @@ const ProductPageContent = ({locale = defaultLocale}: ProductPageContentProps) =
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">PRODUCTS</h1>
       </div>
 
-      {productSections.map((section, index) => (
+      {sections.map((section, index) => (
         <ProductSection
           key={section.title}
           index={index}

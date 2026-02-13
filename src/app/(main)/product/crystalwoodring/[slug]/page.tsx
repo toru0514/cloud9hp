@@ -1,21 +1,20 @@
 import type {Metadata} from "next";
 import {notFound} from "next/navigation";
-import {woodringItems} from "@/components/home/product/productData";
 import ProductWoodRingDetailContent from "@/components/pages/ProductWoodRingDetailContent";
-import {productDetailPages} from "@/data/productDetails";
+import {getCategoryValue, getProductBySlug, getProductsWithDetail} from "@/lib/microcms";
 
-type WoodRingItem = (typeof woodringItems)[number] & { slug?: string };
+export const revalidate = 60;
 
-export function generateStaticParams() {
-  return Object.entries(productDetailPages)
-    .filter(([, info]) => info.sectionPath === "crystalwoodring")
-    .map(([slug]) => ({slug}));
+export async function generateStaticParams() {
+  const products = await getProductsWithDetail("crystalwoodring");
+  return products.map((p) => ({slug: p.slug}));
 }
 
-export function generateMetadata(
-  {params}: { params: { slug: string } },
-): Metadata {
-  const product = (woodringItems as WoodRingItem[]).find((item) => item.slug === params.slug);
+export async function generateMetadata(
+  {params}: { params: Promise<{ slug: string }> },
+): Promise<Metadata> {
+  const {slug} = await params;
+  const product = await getProductBySlug(slug);
   if (!product) {
     return {
       title: "商品が見つかりません | cloud9woodwork",
@@ -28,11 +27,11 @@ export function generateMetadata(
   };
 }
 
-export default function CrystalWoodRingDetailPage({params}: { params: { slug: string } }) {
-  const product = (woodringItems as WoodRingItem[]).find((item) => item.slug === params.slug);
-  const detailInfo = productDetailPages[params.slug];
+export default async function CrystalWoodRingDetailPage({params}: { params: Promise<{ slug: string }> }) {
+  const {slug} = await params;
+  const product = await getProductBySlug(slug);
 
-  if (!product || !detailInfo || detailInfo.sectionPath !== "crystalwoodring") {
+  if (!product || !product.detailText || getCategoryValue(product) !== "crystalwoodring") {
     return notFound();
   }
 
@@ -41,12 +40,12 @@ export default function CrystalWoodRingDetailPage({params}: { params: { slug: st
       product={{
         enName: product.enName,
         jpName: product.jpName,
-        image: product.image,
-        url: product.url,
-        mUrl: product.mUrl,
+        image: product.image.url,
+        url: product.creemaUrl,
+        mUrl: product.minneUrl,
       }}
-      detailText={detailInfo.detailText}
-      images={detailInfo.images}
+      detailText={product.detailText}
+      images={product.detailImages?.map((di) => di.image.url) ?? [product.image.url]}
     />
   );
 }
